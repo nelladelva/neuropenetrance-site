@@ -227,6 +227,26 @@
   .evidence-footnote{ margin-top:28px; padding-top:22px; border-top:1px solid var(--line); font-size:0.87rem; color:var(--text-mid); line-height:1.65; }
   .evidence-footnote a{ color:var(--cool); text-decoration:underline; }
 
+  /* ---------- Scientific rationale tabs ---------- */
+  .rationale-block{ margin-top:40px; }
+  .rationale-tabs{ display:flex; gap:0; border-bottom:1px solid var(--line); margin-bottom:26px; flex-wrap:wrap; }
+  .rationale-tab{
+    font-family:var(--sans); font-size:0.85rem; font-weight:600; color:var(--text-mid);
+    background:none; border:none; padding:11px 4px; margin-right:24px; cursor:pointer;
+    border-bottom:2px solid transparent; transition:color 0.15s ease, border-color 0.15s ease;
+  }
+  .rationale-tab:hover{ color:var(--ink); }
+  .rationale-tab.active{ color:var(--ink); border-bottom-color:var(--cherry); }
+  .rationale-panel p{ font-size:0.93rem; color:var(--text-mid); line-height:1.75; max-width:720px; }
+  .citation-list{ margin-top:18px; display:flex; flex-direction:column; gap:10px; }
+  .citation-card{
+    display:flex; flex-direction:column; gap:3px; padding:14px 16px; border:1px solid var(--line);
+    border-radius:3px; background:var(--card); text-decoration:none; transition:border-color 0.15s ease;
+  }
+  .citation-card:hover{ border-color:var(--cool); }
+  .citation-title{ font-size:0.89rem; color:var(--ink); font-weight:500; line-height:1.4; }
+  .citation-meta{ font-family:var(--mono); font-size:0.74rem; color:var(--text-dim); }
+
   /* ---------- Impact ---------- */
   .impact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
   @media (max-width:820px){ .impact-grid{ grid-template-columns:1fr; } }
@@ -320,7 +340,7 @@
       <a href="#impact">Wirkung</a>
       <a href="#team">Team</a>
       <a href="index.html" class="lang-switch">EN</a>
-      <a href="https://github.com/nelladelva/neuropenetrance_app" class="nav-cta" target="_blank" rel="noopener">Modell testen</a>
+      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Modell testen</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Menü umschalten">☰</button>
   </div>
@@ -335,7 +355,7 @@
         <h1>Können Ihre Gene Ihr psychisches Erkrankungsrisiko vorhersagen?</h1>
         <p class="lede">NeuroPenetrance macht aus Genexpressions- und iPSC-basierten Multiomics-Daten ein interpretierbares Risikosignal für psychiatrische und neuroentwicklungsbedingte Erkrankungen — fundiert durch validierte Forschung am Max-Delbrück-Centrum für Molekulare Medizin, Berlin.</p>
         <div class="cta-row">
-          <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-primary" target="_blank" rel="noopener">Live-Modell entdecken</a>
+          <a href="https://neuropenetrance.streamlit.app" class="btn btn-primary" target="_blank" rel="noopener">Live-Modell entdecken</a>
           <a href="#idea" class="btn btn-ghost">So funktioniert es</a>
         </div>
         <p class="meta-line">Fulbright-Forschungsstipendium · Hammes-Labor, MDC Berlin</p>
@@ -521,6 +541,64 @@
 
         <p class="evidence-footnote">Alle fünf Hypothesen dieser Analyse wurden präregistriert, bevor die Daten angefasst wurden; zwei wurden ehrlich als verworfen berichtet. Derselbe Standard an transparenter, reproduzierbarer Methodik gilt für jeden proprietären Datensatz, den Engine 1 künftig erzeugt. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">Code und Methodik auf GitHub ansehen →</a></p>
       </div>
+
+      <div class="rationale-block">
+        <div class="section-head" style="margin-bottom:26px;">
+          <span class="eyebrow">Die wissenschaftliche Grundlage</span>
+          <h2 class="section-title" style="font-size:1.2rem;">Warum Genetik, genetische Modifikatoren und Proteomik valide Risikosignale sind</h2>
+          <p>Das ist keine neue Behauptung — es ist die Richtung, in die die publizierte Literatur bereits weist. Klicken Sie sich durch die Evidenzbasis hinter jeder Ebene der Plattform.</p>
+        </div>
+
+        <div class="rationale-tabs" role="tablist" aria-label="Kategorien der wissenschaftlichen Grundlage">
+          <button class="rationale-tab active" role="tab" aria-selected="true" data-tab="genetics" type="button">Genetische Risikovarianten</button>
+          <button class="rationale-tab" role="tab" aria-selected="false" data-tab="modifiers" type="button">Genetische Modifikatoren &amp; Penetranz</button>
+          <button class="rationale-tab" role="tab" aria-selected="false" data-tab="proteomics" type="button">Proteomik als klinisches Werkzeug</button>
+        </div>
+
+        <div class="rationale-panels">
+          <div class="rationale-panel active" id="panel-genetics" role="tabpanel">
+            <p>Genomweite Assoziationsstudien haben Tausende Varianten mit psychiatrischen Erkrankungen in Verbindung gebracht. Einzeln hat jede Variante nur einen geringen Effekt — aggregiert zu einem polygenen Risikoscore bilden sie jedoch ein reproduzierbares Signal, das bereits für Risikostratifizierung auf Forschungsniveau genutzt wird. Aktuelle Einschätzungen sehen die kurzfristige klinische Übertragung vor allem als Validierungs- und Kommunikationsherausforderung, nicht als wissenschaftliches Problem.</p>
+            <div class="citation-list">
+              <a class="citation-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10576695/" target="_blank" rel="noopener">
+                <span class="citation-title">Clinical utility of polygenic risk scores: a critical 2023 appraisal</span>
+                <span class="citation-meta">Koch et al. · Journal of Community Genetics, 2023</span>
+              </a>
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/32770057/" target="_blank" rel="noopener">
+                <span class="citation-title">Polygenic risk score as clinical utility in psychiatry: a clinical viewpoint</span>
+                <span class="citation-meta">Fujii et al. · Journal of Human Genetics, 2020</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="rationale-panel" id="panel-modifiers" role="tabpanel" hidden>
+            <p>Das Vorliegen einer pathogenen Variante bedeutet nicht zwangsläufig, dass die Erkrankung ausbricht. Eine wachsende Zahl von Studien zeigt, dass genetische Modifikatoren — sekundäre Varianten, die die Wirkung einer primären Mutation verstärken oder abschwächen — zusammen mit epigenetischen und Umweltfaktoren ein wesentlicher Grund für unvollständige Penetranz bei neurogenetischen und neuroentwicklungsbedingten Erkrankungen sind. Genau diese Lücke soll NeuroPenetrance quantifizieren.</p>
+            <div class="citation-list">
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/42471092/" target="_blank" rel="noopener">
+                <span class="citation-title">Incomplete penetrance in neurogenetic disorders: current insights and emerging perspectives</span>
+                <span class="citation-meta">ScienceDirect / PubMed, 2026</span>
+              </a>
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/38453051/" target="_blank" rel="noopener">
+                <span class="citation-title">Penetrance, variable expressivity and monogenic neurodevelopmental disorders</span>
+                <span class="citation-meta">Isidor et al., 2024</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="rationale-panel" id="panel-proteomics" role="tabpanel" hidden>
+            <p>Keine klinische Leitlinie enthält derzeit einen bluteigenen Test für Depression — die Diagnose stützt sich weiterhin vollständig auf Symptominterviews. Proteomisches Profiling von Blut ist der aussichtsreichste Kandidat, um diese Lücke zu schließen: Ein Jahrzehnt an Studien hat reproduzierbare Kandidaten-Proteinsignaturen identifiziert, und Forschende sehen zunehmend die groß angelegte Validierung, nicht die Entdeckung, als verbleibende Hürde für den klinischen Einsatz.</p>
+            <div class="citation-list">
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/29466886/" target="_blank" rel="noopener">
+                <span class="citation-title">Proteomic approaches to identify blood-based biomarkers for depression and bipolar disorders</span>
+                <span class="citation-meta">Expert Review of Proteomics, 2018</span>
+              </a>
+              <a class="citation-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11184055/" target="_blank" rel="noopener">
+                <span class="citation-title">Serum proteomic analysis uncovers novel serum biomarkers for depression</span>
+                <span class="citation-meta">Frontiers in Psychiatry, 2024</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -582,11 +660,13 @@
         <h2>Sehen Sie sich das Signal selbst an</h2>
         <p>Die Proof-of-Concept-Klassifikationspipeline ist Open Source und live einsehbar — trainiert und validiert auf dem oben beschriebenen öffentlichen GSE98793-Datensatz. Sie bildet den analytischen Kern, den Engine 2 künftig auf proprietäre, iPSC-abgeleitete Daten erweitern wird.</p>
         <div class="cta-row">
-          <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-primary" target="_blank" rel="noopener">App auf GitHub öffnen</a>
+          <a href="https://neuropenetrance.streamlit.app" class="btn btn-primary" target="_blank" rel="noopener">Live-App öffnen</a>
+          <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-ghost" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>
         </div>
         <p class="demo-note">Open-Source-Proof-of-Concept · klinische Produktionsplattform in Entwicklung</p>
       </div>
       <div class="demo-card">
+        <div class="row"><span>Live-App</span><span>neuropenetrance.streamlit.app</span></div>
         <div class="row"><span>Repository</span><span>neuropenetrance_app</span></div>
         <div class="row"><span>Framework</span><span>Streamlit</span></div>
         <div class="row"><span>Stack</span><span>Python · scikit-learn</span></div>
@@ -613,26 +693,12 @@
         </div>
       </div>
 
-      <div class="mentor-grid">
-        <div class="mentor-card">
-          <div class="initials">AH</div>
-          <h4>Dr. Annette Hammes</h4>
-          <div class="role">Akademische Mentorin, MDC Berlin — SHH-Signalweg &amp; kortikale Entwicklung. Zugesagter Laborzugang und validierte hiPSC-Linien.</div>
-        </div>
-        <div class="mentor-card">
-          <div class="initials">HH</div>
-          <h4>Dr. Hanna Hörnberg</h4>
-          <div class="role">MDC Berlin — Kollaboration Proteomik &amp; RNA-Seq.</div>
-        </div>
-        <div class="mentor-card">
-          <div class="initials">GL</div>
-          <h4>Dr. Gary Lewin</h4>
-          <div class="role">MDC Berlin — Kollaboration Elektrophysiologie.</div>
-        </div>
-        <div class="mentor-card">
-          <div class="initials">VD</div>
-          <h4>Dr. Valérie Dupé</h4>
-          <div class="role">Universität Rennes — Patientenabgeleitete iPSC-Linien.</div>
+      <div class="founder-block" style="margin-bottom:0;">
+        <div class="avatar">AH</div>
+        <div>
+          <h3>Dr. Annette Hammes</h3>
+          <span class="role">Akademische Mentorin — MDC Berlin</span>
+          <p>Gruppenleiterin, Molekulare Signalwege der kortikalen Entwicklung, am Max-Delbrück-Centrum für Molekulare Medizin. Das Labor von Dr. Hammes stellt die validierten hiPSC-Linien, Differenzierungsprotokolle und die Forschungsinfrastruktur bereit, die Engine 1 zugrunde liegen — als Sachleistung für NeuroPenetrance zugesagt.</p>
         </div>
       </div>
     </div>
@@ -647,7 +713,7 @@
         <dl>
           <div>
             <dt>E-MAIL</dt>
-            <dd><a href="mailto:nella@stem-azing.com">nella@stem-azing.com</a></dd>
+            <dd><a href="mailto:stemazing.advancement@gmail.com">stemazing.advancement@gmail.com</a></dd>
           </div>
           <div>
             <dt>STANDORT</dt>
@@ -655,7 +721,7 @@
           </div>
           <div>
             <dt>PROOF OF CONCEPT</dt>
-            <dd><a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">github.com/nelladelva/neuropenetrance_app</a></dd>
+            <dd><a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">neuropenetrance.streamlit.app</a></dd>
           </div>
         </dl>
       </div>
@@ -689,7 +755,7 @@
     <p>NeuroPenetrance basiert auf Forschung, die im Rahmen eines Fulbright-Forschungsstipendiums am Max-Delbrück-Centrum für Molekulare Medizin, Berlin, durchgeführt wurde. © 2026 Nella Christie Delva.</p>
     <div class="footer-links">
       <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:nella@stem-azing.com">E-Mail</a>
+      <a href="mailto:stemazing.advancement@gmail.com">E-Mail</a>
     </div>
   </div>
 </footer>
@@ -718,6 +784,18 @@
     io.observe(aucSection);
   } else { revealBars(); }
 
+  document.querySelectorAll('.rationale-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.rationale-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      document.querySelectorAll('.rationale-panel').forEach(p => { p.classList.remove('active'); p.hidden = true; });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = document.getElementById('panel-' + tab.dataset.tab);
+      panel.hidden = false;
+      panel.classList.add('active');
+    });
+  });
+
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -726,7 +804,7 @@
     const msg = document.getElementById('cf-msg').value;
     const subject = encodeURIComponent('NeuroPenetrance-Anfrage von ' + name);
     const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = 'mailto:nella@stem-azing.com?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:stemazing.advancement@gmail.com?subject=' + subject + '&body=' + body;
   });
 </script>
 
