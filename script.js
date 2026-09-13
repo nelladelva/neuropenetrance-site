@@ -65,30 +65,15 @@
   });
 })();
 
-// Interest / market-data survey -> mailto (Get Involved page)
+// Get Involved form now submits directly to Formspree (native POST) —
+// this just shows a thank-you state after the redirect back.
 (function(){
-  var form = document.getElementById('interestForm');
-  if (!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = document.getElementById('if-name').value || '(not provided)';
-    var email = document.getElementById('if-email').value || '(not provided)';
-    var role = document.getElementById('if-role').value;
-    var interest = document.getElementById('if-interest').value;
-    var conversation = document.getElementById('if-conversation').value;
-    var msg = document.getElementById('if-msg').value || '(none)';
-    var subject = encodeURIComponent('NeuroPenetrance interest form: ' + role);
-    var lines = [
-      'NEUROPENETRANCE — INTEREST FORM SUBMISSION',
-      '',
-      'Name: ' + name,
-      'Email: ' + email,
-      'Role: ' + role,
-      'Interest: ' + interest,
-      'Open to a 15-minute conversation: ' + conversation,
-      'Additional comments: ' + msg
-    ];
-    var body = encodeURIComponent(lines.join('\n'));
-    window.location.href = 'mailto:stemazing.advancement@gmail.com?subject=' + subject + '&body=' + body;
-  });
+  var success = document.getElementById('involvedSuccess');
+  var formWrap = document.getElementById('involvedFormWrap');
+  if (!success || !formWrap) return;
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === 'true') {
+    success.style.display = 'block';
+    formWrap.style.display = 'none';
+  }
 })();
