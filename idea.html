@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Idea — NeuroPenetrance</title>
+<meta name="description" content="A weather-forecast approach to mental health risk — and why functional cellular data succeeds where DNA-only tests fall short.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="wordmark">NeuroPenetrance</a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="problem.html">The Problem</a>
+      <a href="idea.html" class="active">The Idea</a>
+      <a href="platform.html">Platform</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="impact.html">Impact</a>
+      <a href="team.html">Team</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
+      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="wrap">
+      <a href="index.html" class="breadcrumb">← Back to overview</a>
+      <span class="eyebrow">The idea</span>
+      <h1>Think of it like a weather forecast — for mental health risk</h1>
+      <p class="lede">A forecast doesn't claim it will definitely rain. It reads the signals in the atmosphere and reports a probability you can act on. NeuroPenetrance applies the same logic to biology.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="article">
+        <p>Instead of a yes-or-no genetic diagnosis, NeuroPenetrance quantifies biological risk using molecular data — giving clinicians and researchers an evidence-based signal they can actually act on.</p>
+
+        <div class="flow" style="margin-top:40px;">
+          <div class="flow-step">
+            <span class="step-label">INPUT</span>
+            <h3>Biological data</h3>
+            <p>Gene and protein expression from patient-derived iPSC neurons — RNA-seq, proteomics, ATAC-seq.</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="flow-step">
+            <span class="step-label">MODEL</span>
+            <h3>ML pipeline</h3>
+            <p>Classifiers trained across thousands of molecular features find the patterns that separate vulnerability from resilience.</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="flow-step">
+            <span class="step-label">OUTPUT</span>
+            <h3>Risk signal</h3>
+            <p>A ranked, interpretable Penetrance Risk Profile — not a black box — for clinical or pharma use.</p>
+          </div>
+        </div>
+
+        <h2>Why cellular data, not just a DNA sequence</h2>
+        <p>A separate category of company offers DNA-based polygenic risk scores for psychiatric conditions — Orchid Health and Genomic Prediction for prospective parents, Myriad Genetics' RiskScore for breast cancer risk. These companies work from static, inherited DNA sequence alone.</p>
+        <p>NeuroPenetrance's approach is fundamentally different in kind: it measures the functional, cellular consequence of a variant in patient-derived neurons — which can reveal how modifier genes, environment-like perturbations, and individual genetic background shape whether a risk variant actually produces disease. That's precisely the biological question a DNA sequence alone cannot answer. It's a genuine scientific differentiator, not just a marketing angle.</p>
+
+        <h2>The bridge from blood to brain</h2>
+        <p>The Engine 2 proof of concept — described in full on the <a href="evidence.html" style="color:var(--cool); text-decoration:underline;">Evidence page</a> — was deliberately built on a hard test case: cross-sectional whole-blood transcriptomics, a technically noisier, less biologically direct signal than cell-type-specific data from genetically defined cell lines.</p>
+        <div class="callout">
+          <p>The fact that this pipeline already extracts validated, interpretable signal under those harder conditions is strong evidence for its performance once applied to Engine 1's richer, purpose-generated iPSC-derived datasets — neuronal transcriptomic and proteomic data tied to known genetic variants and controlled experimental perturbations, rather than a noisy cross-sectional blood sample.</p>
+        </div>
+
+        <h2>The compounding data flywheel</h2>
+        <p>The two engines reinforce each other through a data flywheel: every Engine 1 service contract generates proprietary training data that improves Engine 2's predictive power, which in turn increases the commercial value of each new service contract. This compounding advantage is difficult for a generic iPSC contract lab or an academic core facility to replicate — they have the wet-lab capability, but not the AI layer built specifically for this question.</p>
+
+        <p style="margin-top:40px;"><a href="platform.html" class="btn btn-ghost">See how the two engines work together →</a> &nbsp; <a href="evidence.html" class="btn btn-ghost">See the validated results →</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <div class="footer-links">
+      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:stemazing.advancement@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

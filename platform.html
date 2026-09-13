@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platform — NeuroPenetrance</title>
+<meta name="description" content="Two engines, one flywheel — the iPSC penetrance profiling service, the PenetranSci AI biomarker platform, and where NeuroPenetrance sits in the competitive landscape.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="wordmark">NeuroPenetrance</a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="problem.html">The Problem</a>
+      <a href="idea.html">The Idea</a>
+      <a href="platform.html" class="active">Platform</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="impact.html">Impact</a>
+      <a href="team.html">Team</a>
+      <a href="involved.html">Get Involved</a>
+      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
+      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="wrap">
+      <a href="index.html" class="breadcrumb">← Back to overview</a>
+      <span class="eyebrow">The platform</span>
+      <h1>Two engines, one flywheel</h1>
+      <p class="lede">A wet-lab profiling service and an AI biomarker platform, built on the same scientific foundation and designed to strengthen each other over time.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="article">
+        <h2>Engine 1 — iPSC Penetrance Profiling Service</h2>
+        <p>Patient-derived hiPSC lines are differentiated into disease-relevant neuronal subtypes — GABAergic neurons, cortical iNeurons, and 3D cerebral organoids — using protocols validated in the Hammes Lab at MDC Berlin: dual-SMAD inhibition for cortical neural progenitors (~14 days) and NGN2-driven iNeuron generation (~2 weeks).</p>
+        <p>Graded SHH pathway perturbation is introduced via CRISPR-edited lines (SHH+/−, SHH−/−, LRP2+/−, LRP2−/−) and pharmacological modulation, with patient-derived iPSCs carrying human SHH mutations available from day one through collaborator Dr. Valérie Dupé (University of Rennes). Deep multi-omics phenotyping follows — bulk RNA-seq and quantitative proteomics, ATAC-seq chromatin accessibility, and synaptic proteome analysis — alongside functional readouts including MEA electrophysiology and patch-clamp recordings.</p>
+        <ul class="plain-list">
+          <li><span class="bullet"></span><span><strong>Penetrance Risk Profile</strong> — a quantitative molecular signature distinguishing genetic vulnerability from resilience.</span></li>
+          <li><span class="bullet"></span><span><strong>Therapeutic Sensitivity Report</strong> — pharmacological modulation readouts identifying a patient's response window for intervention.</span></li>
+          <li><span class="bullet"></span><span><strong>Biomarker Panel</strong> — a ranked set of molecular targets for clinical follow-up or trial enrollment.</span></li>
+        </ul>
+
+        <h2>Engine 2 — PenetranSci AI Biomarker Platform</h2>
+        <p>Proprietary ML models are trained on the multi-omics datasets Engine 1 generates, creating a compounding data advantage as the service scales. Classifiers — logistic regression, random forest, and eventually deep learning — are trained on thousands of gene and protein expression features per sample to identify the strongest biological predictors of disease risk. Outputs are ranked candidate biomarkers, filterable by pathway, cell type, and developmental stage, delivered through a SaaS-accessible interface for pharma R&amp;D and diagnostic lab partners.</p>
+        <p>The founder's own data infrastructure experience — SQL, Python, BigQuery, scikit-learn, and Plotly — means Engine 2 can be built by the founding team in Year 1 without requiring an external technical co-founder. As Engine 1 scales, NeuroPenetrance accumulates multi-omics data from characterized iPSC lines that no competitor can access — and unlike public reference datasets, this proprietary data is tied to known genetic variants and controlled experimental perturbations, enabling causal rather than purely correlational biomarker discovery.</p>
+
+        <h2>The competitive landscape</h2>
+        <p>No company identified in this space combines iPSC-derived multi-omics profiling with a disease-risk or penetrance-stratification product specifically for neurodevelopmental disorders. The broader neighborhood — precision psychiatry biomarkers, iPSC-based drug-response prediction, and polygenic risk scoring — already contains funded, credentialed competitors, several of which could plausibly extend into this niche.</p>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Company</th><th>Geography</th><th>Technology</th><th>Focus</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>NeuroKaire (formerly Genetika+)</td><td>Israel; active in US &amp; EU</td><td>iPSC-derived neurons + AI/pharmacogenetics</td><td>Drug-response prediction for MDD (not disease risk)</td></tr>
+              <tr><td>Circular Genomics</td><td>United States</td><td>Circulating RNA blood biomarkers</td><td>Antidepressant response prediction</td></tr>
+              <tr><td>Alto Neuroscience</td><td>United States</td><td>EEG, neurocognitive tasks, wearables</td><td>Patient-drug matching across depression, PTSD, schizophrenia</td></tr>
+              <tr><td>Orchid Health / Genomic Prediction</td><td>United States</td><td>DNA-based polygenic risk scoring</td><td>Embryo selection / reproductive risk scoring</td></tr>
+              <tr><td>Axol Bioscience / NeuroProof / NEUROFIT</td><td>UK / Germany / France</td><td>General iPSC &amp; CNS CRO services</td><td>Broad disease modeling, no penetrance focus</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>NeuroKaire is the closest technological analog — a highly similar iPSC-plus-AI wet-lab and computational stack — but it answers a different clinical question: which drug to prescribe to a patient already diagnosed with MDD, versus whether a variant carrier is likely to develop a disorder in the first place. See <a href="idea.html" style="color:var(--cool); text-decoration:underline;">The Idea</a> for why functional cellular data is also a genuine scientific differentiator from the DNA-only competitors in this table.</p>
+
+        <h2>Revenue model</h2>
+        <p>Engine 1 operates on a fee-for-service model: a Penetrance Risk Profile priced at €8,000–15,000 per sample set, a Full Therapeutic Sensitivity Report at €20,000–35,000, and custom multi-patient cohort contracts for pharma clients. Engine 2 introduces a SaaS licensing layer from Year 2 onward, priced at €2,000–8,000 per month for pharma biomarker-discovery teams — revenue that scales without a proportional increase in wet-lab cost.</p>
+
+        <div class="flywheel-note" style="margin-top:32px; border-top:1px solid var(--line); padding-top:26px;">Every Engine 1 service contract generates proprietary training data that sharpens Engine 2's predictions — which in turn increases the value of every new service contract. It's a compounding advantage that a generic iPSC contract lab or an academic core facility can't easily replicate.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <div class="footer-links">
+      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:stemazing.advancement@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
