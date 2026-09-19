@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get in touch — NeuroPenetrance</title>
+<meta name="description" content="Tell us who you are and what interests you about NeuroPenetrance — pilots, collaborations, or simply following along. Takes about a minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
+      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
+        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
+        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
+      </svg>
+      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
+    </a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="problem.html">The Problem</a>
+      <a href="idea.html">The Idea</a>
+      <a href="platform.html">Platform</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="impact.html">Impact</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="nav-cta active">Get in touch</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="wrap">
+      <a href="index.html" class="breadcrumb">← Back to home</a>
+      <span class="eyebrow">Get in touch</span>
+      <h1>Tell us who you are</h1>
+      <p class="lede">Whether you want to discuss a pilot, propose a collaboration, or simply follow what we're building — we would like to hear from you. It takes about a minute, and every answer helps us build the right thing for the right people.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap contact-grid">
+
+      <div class="contact-info">
+        <h2 class="section-title" style="font-size:1.3rem;">Why we ask</h2>
+        <ul class="plain-list" style="margin-top:18px;">
+          <li><span class="bullet"></span><span>It tells us who is actually interested — clinicians, companies, researchers, families — so we build for real needs rather than assumptions.</span></li>
+          <li><span class="bullet"></span><span>It gives us structured evidence for grant and funding applications, instead of anecdotes.</span></li>
+          <li><span class="bullet"></span><span>It lets us follow up properly with anyone who wants a deeper conversation.</span></li>
+        </ul>
+
+        <dl>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:stemazing.advancement@gmail.com">stemazing.advancement@gmail.com</a></dd>
+          </div>
+          <div>
+            <dt>Based in</dt>
+            <dd>Berlin, Germany</dd>
+          </div>
+          <div>
+            <dt>Try the model</dt>
+            <dd><a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">neuropenetrance.streamlit.app</a></dd>
+          </div>
+          <div>
+            <dt>Source code</dt>
+            <dd><a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">github.com/nelladelva</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="form-card">
+        <div id="formSuccess" class="form-success" style="display:none;">
+          <h3>Thank you — we've got it</h3>
+          <p>Your response has been received. If you left an email address and asked to be contacted, we'll be in touch. We appreciate you taking the time.</p>
+          <p style="margin-top:16px;"><a href="index.html" class="btn btn-ghost">Back to the site</a></p>
+        </div>
+
+        <div id="formWrap">
+          <h3>Share your interest</h3>
+          <p>Your answers come straight to us by email. Nothing is stored on this website, and nothing is shared with anyone else.</p>
+
+          <form id="interestForm" action="https://formspree.io/f/xeaqbkzb" method="POST">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="NeuroPenetrance — new interest form submission">
+
+            <div class="field">
+              <label for="f-name">Name (optional)</label>
+              <input type="text" id="f-name" name="name" autocomplete="name">
+            </div>
+
+            <div class="field">
+              <label for="f-email">Email (only if you'd like a reply)</label>
+              <input type="email" id="f-email" name="email" autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="f-org">Organisation (optional)</label>
+              <input type="text" id="f-org" name="organisation" autocomplete="organization">
+            </div>
+
+            <div class="field">
+              <label for="f-role">What best describes you?</label>
+              <select id="f-role" name="role" required>
+                <option value="">Please choose…</option>
+                <option value="Clinician — psychiatrist">Clinician — psychiatrist</option>
+                <option value="Clinician — genetic counsellor">Clinician — genetic counsellor</option>
+                <option value="Clinician — other">Clinician — other</option>
+                <option value="Biotech / pharma R&D">Biotech / pharma R&amp;D</option>
+                <option value="Diagnostics / clinical genetics lab">Diagnostics / clinical genetics lab</option>
+                <option value="Academic researcher">Academic researcher</option>
+                <option value="Contract research organisation (CRO)">Contract research organisation (CRO)</option>
+                <option value="Patient or family member">Patient or family member</option>
+                <option value="Investor / funder">Investor / funder</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-interest">What interests you most?</label>
+              <select id="f-interest" name="interest" required>
+                <option value="">Please choose…</option>
+                <option value="A pilot with the laboratory service">A pilot with the laboratory service</option>
+                <option value="The AI biomarker platform">The AI biomarker platform</option>
+                <option value="Research collaboration">Research collaboration</option>
+                <option value="Testing a neuro-therapeutic compound">Testing a neuro-therapeutic compound</option>
+                <option value="Clinical / counselling use">Clinical / counselling use</option>
+                <option value="Investment or funding">Investment or funding</option>
+                <option value="Just following along">Just following along</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-talk">Open to a 15-minute conversation?</label>
+              <select id="f-talk" name="conversation" required>
+                <option value="">Please choose…</option>
+                <option value="Yes">Yes</option>
+                <option value="Maybe later">Maybe later</option>
+                <option value="No, just following">No, just following</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-msg">Anything else you'd like to share?</label>
+              <textarea id="f-msg" name="message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top:4px; align-self:flex-start;">Send my interest</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
+    <div class="footer-links">
+      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:stemazing.advancement@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

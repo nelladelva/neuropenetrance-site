@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeuroPenetrance — From genetic risk to functional prediction</title>
-<meta name="description" content="NeuroPenetrance turns a genetic result into a functional prediction — using patient-derived neurons and machine learning to show which variant carriers actually go on to develop a neurodevelopmental or psychiatric disorder.">
+<title>NeuroPenetrance — Who actually gets sick, and who doesn't</title>
+<meta name="description" content="A genetic test can tell you that you carry a risk gene. It can't tell you whether you'll get sick. NeuroPenetrance closes that gap using patient-derived brain cells and machine learning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,16 +16,16 @@
 
 <header class="site-header">
   <div class="wrap nav-row">
-    <a href="index.html" class="wordmark brand-mark">
-      <svg class="brand-icon" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="9" cy="7" r="5" style="fill:var(--cherry)"/>
-        <line x1="9" y1="12" x2="9" y2="19" style="stroke:var(--cherry)" stroke-width="1.6"/>
-        <line x1="9" y1="19" x2="22" y2="10" style="stroke:var(--text-dim)" stroke-width="1.6"/>
-        <circle cx="22" cy="10" r="3.2" style="fill:var(--text-dim)"/>
-        <line x1="9" y1="19" x2="9" y2="30" style="stroke:var(--ink)" stroke-width="1.6"/>
-        <circle cx="9" cy="30" r="4" style="fill:var(--ink)"/>
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
+      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
+        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
+        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
       </svg>
-      <span>Neuro<span class="n-penetrance">Penetrance</span></span>
+      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
     </a>
     <nav class="primary-nav" id="primaryNav">
       <a href="problem.html">The Problem</a>
@@ -34,9 +34,7 @@
       <a href="evidence.html">Evidence</a>
       <a href="impact.html">Impact</a>
       <a href="team.html">Team</a>
-      <a href="involved.html">Get Involved</a>
-      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
-      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
   </div>
@@ -44,212 +42,227 @@
 
 <main id="main">
 
-  <!-- HERO -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="hero-kicker">
-          <svg class="brand-icon" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="9" cy="7" r="5" style="fill:var(--cherry)"/>
-            <line x1="9" y1="12" x2="9" y2="19" style="stroke:var(--cherry)" stroke-width="1.6"/>
-            <line x1="9" y1="19" x2="22" y2="10" style="stroke:var(--text-dim)" stroke-width="1.6"/>
-            <circle cx="22" cy="10" r="3.2" style="fill:var(--text-dim)"/>
-            <line x1="9" y1="19" x2="9" y2="30" style="stroke:var(--ink)" stroke-width="1.6"/>
-            <circle cx="9" cy="30" r="4" style="fill:var(--ink)"/>
-          </svg>
-          Penetrance profiling for neurodevelopmental disorders
-        </p>
-        <h1>Sequencing tells you who's at risk. It doesn't tell you who gets sick.</h1>
-        <p class="lede">NeuroPenetrance turns a genetic result into a functional prediction — using patient-derived neurons and machine learning to show which variant carriers actually go on to develop a neurodevelopmental or psychiatric disorder.</p>
+        <h1>The same gene. Two very different lives.</h1>
+        <p class="lede">A genetic test can tell you that you carry a risk gene. It cannot tell you whether you will ever become ill. NeuroPenetrance closes that gap — by growing a person's own brain cells in the lab and measuring what their biology actually does.</p>
         <div class="cta-row">
-          <a href="#contact" class="btn btn-primary">Get in touch about a pilot</a>
-          <div class="cta-secondary">
-            <a href="https://neuropenetrance.streamlit.app" class="btn btn-ghost" target="_blank" rel="noopener">See the proof-of-concept</a>
-            <span class="cta-caption">Open-source proof-of-concept · production clinical platform in development</span>
-          </div>
+          <a href="idea.html" class="btn btn-primary">See how it works</a>
+          <a href="evidence.html" class="btn btn-ghost">See the results</a>
         </div>
-        <p class="meta-line">Fulbright research fellowship · Max Delbrück Center, Berlin</p>
+        <p class="trust-bar">Fulbright research fellowship · Hammes Lab · Max Delbrück Center, Berlin</p>
       </div>
 
-      <div class="signal-panel">
+      <div class="fork-card">
         <div class="cap">
-          <span>GENE ACTIVITY IN BLOOD SAMPLES</span>
-          <span>192 SAMPLES</span>
+          <span>ONE MUTATION</span>
+          <span>TWO OUTCOMES</span>
         </div>
-        <svg viewBox="0 0 460 200" role="img" aria-label="Illustrative chart showing a gene activity pattern that looks different between people with depression and healthy volunteers">
-          <line x1="0" y1="50" x2="460" y2="50" stroke="#EDEBE3" stroke-width="1"/>
-          <line x1="0" y1="100" x2="460" y2="100" stroke="#EDEBE3" stroke-width="1"/>
-          <line x1="0" y1="150" x2="460" y2="150" stroke="#EDEBE3" stroke-width="1"/>
-          <path class="signal-path" d="M0,110 C40,70 60,150 100,90 C140,40 160,120 200,60 C240,20 260,100 300,50 C340,10 360,80 400,30 C420,15 440,45 460,25"
-            fill="none" stroke="#A6192E" stroke-width="1.75" opacity="0.85"/>
-          <path class="signal-path delay" d="M0,140 C50,135 90,150 130,140 C170,132 200,148 240,138 C280,132 310,145 350,138 C390,132 420,142 460,136"
-            fill="none" stroke="#B9BBB2" stroke-width="1.75"/>
+        <svg viewBox="0 0 420 230" role="img" aria-label="Diagram: one genetic mutation branches into two outcomes — one person develops the disorder, the other never does">
+          <path d="M60 115 H175" stroke="#1B1D1E" stroke-width="7" stroke-linecap="round"/>
+          <path d="M170 115 C225 115, 235 60, 300 52" stroke="#A6192E" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M170 115 C225 115, 235 170, 300 178" stroke="#A9ADA7" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <circle cx="50" cy="115" r="22" fill="#1B1D1E"/>
+          <circle cx="325" cy="50" r="22" fill="#A6192E"/>
+          <circle cx="325" cy="180" r="17" fill="none" stroke="#A9ADA7" stroke-width="7"/>
         </svg>
-        <div class="legend">
-          <div class="legend-item"><span class="legend-swatch" style="background:#A6192E"></span>People with depression</div>
-          <div class="legend-item"><span class="legend-swatch" style="background:#B9BBB2"></span>Healthy volunteers</div>
+        <div class="fork-legend">
+          <div><span class="dot red"></span><span>Develops the disorder — sometimes severely</span></div>
+          <div><span class="dot grey"></span><span>Carries the same mutation, never develops symptoms</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
-  <section class="section-alt" id="who-its-for">
+  <!-- ============ THE GAP, IN ONE PARAGRAPH ============ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The gap we close</span>
+        <h2 class="section-title">Genetics tells you the risk. It doesn't tell you the outcome.</h2>
+        <p>Doctors call this <strong>incomplete penetrance</strong>: two people can carry exactly the same mutation and end up with completely different lives. One develops autism, schizophrenia or severe depression. The other never has a symptom. Right now, no test can tell a family which one they are looking at.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag">Today</span>
+          <h3>A result nobody can act on</h3>
+          <p>Families receive a genetic finding with no idea what it means for their child's future. Clinicians are left explaining uncertainty rather than giving guidance.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Today</span>
+          <h3>Trials that fail for the wrong reason</h3>
+          <p>Drug trials in brain disorders fail more than 90% of the time — partly because patients who look identical on paper have very different underlying biology.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Our answer</span>
+          <h3>Measure the biology, not just the letters</h3>
+          <p>We grow neurons from a patient's own cells and read what the mutation actually does inside them — then turn that into a clear, interpretable risk signal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2 class="section-title">Think of it like a weather forecast — for brain health</h2>
+        <p>A forecast doesn't promise rain. It reads the signals in the atmosphere and gives you a probability you can plan around. We do the same thing with biology.</p>
+      </div>
+
+      <div class="flow">
+        <div class="flow-step">
+          <span class="step-label">STEP 1</span>
+          <h3>Grow the cells</h3>
+          <p>A small skin or blood sample is reprogrammed into stem cells, then grown into real human neurons carrying that person's exact genetics.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <span class="step-label">STEP 2</span>
+          <h3>Read the biology</h3>
+          <p>We measure thousands of molecular signals in those neurons — which genes switch on, which proteins appear, how the cells behave and fire.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <span class="step-label">STEP 3</span>
+          <h3>Get a clear signal</h3>
+          <p>Machine learning turns those measurements into a readable risk profile — showing which biological patterns point toward illness, and which point toward resilience.</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a href="idea.html" class="btn btn-ghost">Read the full explanation →</a>
+        <a href="platform.html" class="btn btn-ghost">See the technology →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF ============ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Proof it works</span>
+        <h2 class="section-title">Not a pitch-deck number — a tested result</h2>
+        <p>Before a single commercial sample was ever run, the prediction engine was built and tested end-to-end on public patient data — and it held up against published academic benchmarks.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-cell">
+          <div class="num">0.772</div>
+          <div class="label">accuracy score of our compact 10-gene signature (0.50 would be a coin flip)</div>
+        </div>
+        <div class="stat-cell">
+          <div class="num">192</div>
+          <div class="label">real patient and control samples used in the validation</div>
+        </div>
+        <div class="stat-cell">
+          <div class="num small">0.57–0.63</div>
+          <div class="label">what published DNA-only risk scores achieve on the same kind of question</div>
+        </div>
+      </div>
+
+      <div class="btn-row" style="margin-top:0;">
+        <a href="evidence.html" class="btn btn-primary">See the full evidence</a>
+        <a href="https://neuropenetrance.streamlit.app" class="btn btn-ghost" target="_blank" rel="noopener">Try the live demo</a>
+      </div>
+      <p class="trust-bar">Open-source proof of concept · the clinical platform is still in development</p>
+    </div>
+  </section>
+
+  <!-- ============ WHO IT'S FOR ============ -->
+  <section>
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow">Who it's for</span>
-        <h2 class="section-title">Built for three audiences</h2>
+        <h2 class="section-title">Built for the people who have to make the call</h2>
       </div>
 
-      <div class="audience-grid">
-        <div class="audience-card">
-          <span class="audience-tag">Biotech &amp; Pharma R&amp;D</span>
-          <h3>Stop losing trials to unexplained variability.</h3>
-          <p>Stratify NDD clinical trial patients by functional risk, not just genotype — the missing tool behind CNS trial failure rates above 90%.</p>
-          <div class="audience-links">
-            <a href="platform.html" class="audience-link">See the platform →</a>
-          </div>
-        </div>
-        <div class="audience-card">
-          <span class="audience-tag">Clinical Genetics</span>
-          <h3>Give families an answer, not just a variant.</h3>
-          <p>When a genetic result leaves penetrance uncertain, get an interpretable functional signal to support counselling — not another DNA-only score.</p>
-          <div class="audience-links">
-            <a href="evidence.html" class="audience-link">See the evidence →</a>
-          </div>
-        </div>
-        <div class="audience-card">
-          <span class="audience-tag">Academic Research</span>
-          <h3>Built on peer-reviewed foundations, open to collaborate.</h3>
-          <p>Grounded in five years of SHH-pathway research at the Max Delbrück Center. Explore the open-source pipeline or propose a collaboration.</p>
-          <div class="audience-links">
-            <a href="https://github.com/nelladelva/neuropenetrance_app" class="audience-link" target="_blank" rel="noopener">View source</a>
-            <a href="#contact" class="audience-link">Get in touch →</a>
-          </div>
-        </div>
+      <div class="card-grid">
+        <a href="impact.html" class="card">
+          <span class="card-tag">Clinicians</span>
+          <h3>Psychiatrists &amp; genetic counsellors</h3>
+          <p>Give families something more useful than "the result is uncertain" — an interpretable biological signal to support the conversation and guide follow-up.</p>
+          <span class="card-link">See the impact →</span>
+        </a>
+        <a href="platform.html" class="card">
+          <span class="card-tag">Industry</span>
+          <h3>Biotech &amp; pharma R&amp;D</h3>
+          <p>Choose trial participants by what their cells actually do, not just their genotype — and test new neuro-therapeutics on human neurons before the clinic.</p>
+          <span class="card-link">See the platform →</span>
+        </a>
+        <a href="evidence.html" class="card">
+          <span class="card-tag">Science</span>
+          <h3>Academic researchers</h3>
+          <p>Built on five years of peer-reviewed developmental neuroscience, with an open-source analysis pipeline and an open door to collaboration.</p>
+          <span class="card-link">See the evidence →</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- TEASER GRID -->
-  <section id="overview">
+  <!-- ============ EXPLORE ============ -->
+  <section class="section-alt">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Learn more</span>
-        <h2 class="section-title">Curious how it works?</h2>
-        <p>You don't need a science background to explore this. Pick whatever interests you most — each page explains things in plain language, with more detail if you want it.</p>
+        <span class="eyebrow">Explore</span>
+        <h2 class="section-title">Take it at your own pace</h2>
+        <p>Every page is written in plain language first, with the technical detail underneath if you want it.</p>
       </div>
 
-      <p class="diff-line">Unlike DNA-only risk scores, we measure how a variant behaves in a living neuron — not just whether someone carries it.</p>
-
-      <div class="teaser-grid">
-        <a href="problem.html" class="teaser-card">
-          <span class="teaser-num">01</span>
+      <div class="card-grid">
+        <a href="problem.html" class="card">
+          <span class="card-num">01</span>
           <h3>The Problem</h3>
-          <p>Why mental health diagnoses often come too late — and just how many people it affects.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>How big this gap really is — in people, in years of life, and in euros.</p>
+          <span class="card-link">Read more →</span>
         </a>
-        <a href="idea.html" class="teaser-card">
-          <span class="teaser-num">02</span>
+        <a href="idea.html" class="card">
+          <span class="card-num">02</span>
           <h3>The Idea</h3>
-          <p>A simple, everyday way to understand what we're building and why it matters.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>The weather-forecast explanation, and who benefits from it.</p>
+          <span class="card-link">Read more →</span>
         </a>
-        <a href="platform.html" class="teaser-card">
-          <span class="teaser-num">03</span>
+        <a href="platform.html" class="card">
+          <span class="card-num">03</span>
           <h3>Platform</h3>
-          <p>What NeuroPenetrance actually does, and how it's different from anything else out there.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>The two engines: a lab service and an AI platform that feed each other.</p>
+          <span class="card-link">Read more →</span>
         </a>
-        <a href="evidence.html" class="teaser-card">
-          <span class="teaser-num">04</span>
+        <a href="evidence.html" class="card">
+          <span class="card-num">04</span>
           <h3>Evidence</h3>
-          <p>Real, tested results — not just an idea. See the data for yourself.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>Real numbers, honest limits, and the published science behind it.</p>
+          <span class="card-link">Read more →</span>
         </a>
-        <a href="impact.html" class="teaser-card">
-          <span class="teaser-num">05</span>
+        <a href="impact.html" class="card">
+          <span class="card-num">05</span>
           <h3>Impact</h3>
-          <p>Who this could help, from patients and families to doctors and researchers.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>Who this changes things for — patients, clinicians, companies, science.</p>
+          <span class="card-link">Read more →</span>
         </a>
-        <a href="team.html" class="teaser-card">
-          <span class="teaser-num">06</span>
+        <a href="team.html" class="card">
+          <span class="card-num">06</span>
           <h3>Team</h3>
-          <p>Meet the people building NeuroPenetrance, and why they're the ones to do it.</p>
-          <span class="teaser-link">Read more →</span>
+          <p>Two people: a neuroscientist-turned-data-scientist and her mentor.</p>
+          <span class="card-link">Read more →</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- DEMO CTA -->
-  <section class="demo-band" id="demo">
-    <div class="wrap" style="max-width:640px; text-align:center;">
-      <span class="eyebrow">Try it yourself</span>
-      <h2 style="font-family:var(--serif); font-weight:400; font-size:clamp(1.5rem,2.6vw,1.95rem);">See it in action</h2>
-      <p style="margin-top:16px; color:var(--text-mid); font-size:0.99rem; line-height:1.7;">You can already try an early version of the tool yourself, trained on real, publicly available data. It's a first step, not a finished medical product — but it shows the idea works.</p>
-      <div class="cta-row" style="justify-content:center; margin-top:26px;">
-        <a href="https://neuropenetrance.streamlit.app" class="btn btn-primary" target="_blank" rel="noopener">Try the live demo</a>
-        <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-ghost" target="_blank" rel="noopener">View the code</a>
-      </div>
-      <p class="demo-note" style="margin-top:16px;">An early demo, not a finished product — we're still building the full version.</p>
-    </div>
-  </section>
-
-  <!-- INVOLVED TEASER -->
+  <!-- ============ CTA ============ -->
   <section>
     <div class="wrap">
-      <div class="section-head" style="margin-bottom:32px;">
+      <div class="section-head" style="margin-bottom:28px;">
         <span class="eyebrow">Get involved</span>
         <h2 class="section-title">Tell us who you are</h2>
-        <p>Takes about a minute. Whether you're a doctor, a researcher, or just curious — we'd love to hear from you.</p>
+        <p>Whether you're a clinician, a company, a researcher, or a family affected by one of these conditions — we'd like to hear from you. It takes about a minute.</p>
       </div>
-      <a href="involved.html" class="btn btn-primary">Share your interest →</a>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section-alt" id="contact">
-    <div class="wrap contact-grid">
-      <div class="contact-info">
-        <span class="eyebrow">Get in touch</span>
-        <h2 class="section-title" style="max-width:16ch;">Questions? We'd love to hear from you</h2>
-        <dl>
-          <div>
-            <dt>EMAIL</dt>
-            <dd><a href="mailto:stemazing.advancement@gmail.com">stemazing.advancement@gmail.com</a></dd>
-          </div>
-          <div>
-            <dt>LOCATION</dt>
-            <dd>Berlin, Germany</dd>
-          </div>
-          <div>
-            <dt>TRY IT OUT</dt>
-            <dd><a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">neuropenetrance.streamlit.app</a></dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="mailto-card">
-        <h3>Send a message</h3>
-        <p>This opens a pre-filled email in your mail app — nothing is stored or sent through this site.</p>
-        <form id="contactForm">
-          <div class="field">
-            <label for="cf-name">NAME</label>
-            <input type="text" id="cf-name" name="name" required>
-          </div>
-          <div class="field">
-            <label for="cf-email">EMAIL</label>
-            <input type="email" id="cf-email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="cf-msg">MESSAGE</label>
-            <textarea id="cf-msg" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="margin-top:6px;">Prepare email</button>
-        </form>
-      </div>
+      <a href="contact.html" class="btn btn-primary">Get in touch →</a>
     </div>
   </section>
 
@@ -257,9 +270,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
     <div class="footer-links">
-      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:stemazing.advancement@gmail.com">Email</a>
     </div>
   </div>

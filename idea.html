@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Idea — NeuroPenetrance</title>
-<meta name="description" content="A weather-forecast approach to mental health risk — and why functional cellular data succeeds where DNA-only tests fall short.">
+<meta name="description" content="Think of it like a weather forecast for brain health: NeuroPenetrance reads the biological signals in a person's own neurons and turns them into a risk probability clinicians, companies and researchers can act on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,17 @@
 
 <header class="site-header">
   <div class="wrap nav-row">
-    <a href="index.html" class="wordmark">NeuroPenetrance</a>
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
+      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
+        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
+        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
+      </svg>
+      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
+    </a>
     <nav class="primary-nav" id="primaryNav">
       <a href="problem.html">The Problem</a>
       <a href="idea.html" class="active">The Idea</a>
@@ -24,9 +34,7 @@
       <a href="evidence.html">Evidence</a>
       <a href="impact.html">Impact</a>
       <a href="team.html">Team</a>
-      <a href="involved.html">Get Involved</a>
-      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
-      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
   </div>
@@ -36,52 +44,103 @@
 
   <div class="page-header">
     <div class="wrap">
-      <a href="index.html" class="breadcrumb">← Back to overview</a>
+      <a href="index.html" class="breadcrumb">← Back to home</a>
       <span class="eyebrow">The idea</span>
       <h1>Think of it like a weather forecast — for mental health risk</h1>
-      <p class="lede">A forecast doesn't claim it will definitely rain. It reads the signals in the atmosphere and reports a probability you can act on. NeuroPenetrance applies the same logic to biology.</p>
+      <p class="lede">A forecast never promises rain. It reads the signals in the atmosphere and gives you a probability you can plan around — take the umbrella, move the picnic. NeuroPenetrance applies exactly that logic to human biology.</p>
     </div>
   </div>
 
   <section>
     <div class="wrap">
       <div class="article">
-        <p>Instead of a yes-or-no genetic diagnosis, NeuroPenetrance quantifies biological risk using molecular data — giving clinicians and researchers an evidence-based signal they can actually act on.</p>
+        <p>Instead of a yes-or-no genetic answer, we produce a measured, interpretable estimate of biological risk — built from what a person's own cells are actually doing, not from population statistics about people who happen to share their mutation.</p>
 
-        <div class="flow" style="margin-top:40px;">
-          <div class="flow-step">
-            <span class="step-label">INPUT</span>
-            <h3>Biological data</h3>
-            <p>Gene and protein expression from patient-derived iPSC neurons — RNA-seq, proteomics, ATAC-seq.</p>
-          </div>
-          <div class="arrow">→</div>
-          <div class="flow-step">
-            <span class="step-label">MODEL</span>
-            <h3>ML pipeline</h3>
-            <p>Classifiers trained across thousands of molecular features find the patterns that separate vulnerability from resilience.</p>
-          </div>
-          <div class="arrow">→</div>
-          <div class="flow-step">
-            <span class="step-label">OUTPUT</span>
-            <h3>Risk signal</h3>
-            <p>A ranked, interpretable Penetrance Risk Profile — not a black box — for clinical or pharma use.</p>
-          </div>
+        <div class="plain-box">
+          <span class="plain-label">The core insight</span>
+          <p>DNA is the recipe. It doesn't tell you how the meal turned out. We look at the meal — the living neurons that recipe produced — and read the difference.</p>
         </div>
 
-        <h2>Why cellular data, not just a DNA sequence</h2>
-        <p>A separate category of company offers DNA-based polygenic risk scores for psychiatric conditions — Orchid Health and Genomic Prediction for prospective parents, Myriad Genetics' RiskScore for breast cancer risk. These companies work from static, inherited DNA sequence alone.</p>
-        <p>NeuroPenetrance's approach is fundamentally different in kind: it measures the functional, cellular consequence of a variant in patient-derived neurons — which can reveal how modifier genes, environment-like perturbations, and individual genetic background shape whether a risk variant actually produces disease. That's precisely the biological question a DNA sequence alone cannot answer. It's a genuine scientific differentiator, not just a marketing angle.</p>
+        <h2>The three steps, in plain language</h2>
+      </div>
 
-        <h2>The bridge from blood to brain</h2>
-        <p>The Engine 2 proof of concept — described in full on the <a href="evidence.html" style="color:var(--cool); text-decoration:underline;">Evidence page</a> — was deliberately built on a hard test case: cross-sectional whole-blood transcriptomics, a technically noisier, less biologically direct signal than cell-type-specific data from genetically defined cell lines.</p>
+      <div class="flow" style="margin-top:26px; max-width:var(--read);">
+        <div class="flow-step">
+          <span class="step-label">INPUT</span>
+          <h3>Real human neurons</h3>
+          <p>A skin or blood sample is reprogrammed into stem cells and grown into brain cells carrying that person's exact genetics.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <span class="step-label">MODEL</span>
+          <h3>Pattern detection</h3>
+          <p>Machine learning scans thousands of molecular measurements to find the patterns that separate vulnerability from resilience.</p>
+        </div>
+        <div class="arrow">→</div>
+        <div class="flow-step">
+          <span class="step-label">OUTPUT</span>
+          <h3>A readable risk profile</h3>
+          <p>A ranked, explainable signal — not a black box — that a clinician or a research team can actually use.</p>
+        </div>
+      </div>
+
+      <div class="article" style="margin-top:56px;">
+        <h2>Why cells, and not just a DNA sequence</h2>
+        <p>There is a whole category of company offering DNA-based risk scores — polygenic scores for prospective parents, or for cancer risk. They all work from the same raw material: the static sequence you were born with.</p>
+        <p>Our approach is different in kind, not just in degree. We measure the <strong>functional consequence</strong> of a variant inside living neurons. That reveals how other genes, the cellular environment, and a person's whole genetic background combine to either amplify a mutation's effect or buffer it away. A DNA sequence simply cannot answer that question — it is the wrong instrument.</p>
+        <p>This matters more, not less, as the genetics field matures. A 2026 re-analysis in the <em>European Journal of Human Genetics</em> found that widely used DNA-derived penetrance figures had been substantially overstated, with several variants previously flagged as risky recalculating to near-zero penetrance for intellectual disability. Statistics about populations are a poor substitute for measurement of an individual.</p>
+
+        <div class="citation-list">
+          <a class="citation-card" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12647108/" target="_blank" rel="noopener">
+            <span class="citation-title">Advancing neurodevelopmental disorder models with human iPSC and multi-omics integration</span>
+            <span class="citation-meta">Afshar-Saber, Metodieva &amp; D'Amore · Frontiers in Neuroscience · 2025</span>
+          </a>
+          <a class="citation-card" href="https://www.nature.com/articles/s41431-025-01948-0" target="_blank" rel="noopener">
+            <span class="citation-title">Updated penetrance estimates for recurrent copy number variants — an improved definition and formula</span>
+            <span class="citation-meta">Goh et al. · European Journal of Human Genetics · 2026</span>
+          </a>
+        </div>
+        <p class="citation-note">The first of these is a 2025 editorial arguing precisely our thesis: that combining patient-derived stem cells with multi-omics and computational modelling is what moves neurodevelopmental research toward real clinical diagnostics.</p>
+
+        <h2>The honest test we set ourselves</h2>
+        <p>The prediction engine was deliberately validated on a hard case first: whole-blood gene expression data from real patients. Blood is a noisier, more indirect signal than purpose-grown neurons — if the pipeline could find real structure there, it would find more in richer data.</p>
         <div class="callout">
-          <p>The fact that this pipeline already extracts validated, interpretable signal under those harder conditions is strong evidence for its performance once applied to Engine 1's richer, purpose-generated iPSC-derived datasets — neuronal transcriptomic and proteomic data tied to known genetic variants and controlled experimental perturbations, rather than a noisy cross-sectional blood sample.</p>
+          <p>It did. The pipeline pulled out a validated, interpretable signal under those harder conditions, at accuracy comparable to published academic benchmarks. That is a meaningful indicator of how it should perform on the cleaner, purpose-generated neuronal data our lab platform produces — data tied to known mutations and controlled experiments rather than a one-off blood draw. The full numbers are on the <a href="evidence.html" class="inline">Evidence page</a>.</p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <h2>The compounding data flywheel</h2>
-        <p>The two engines reinforce each other through a data flywheel: every Engine 1 service contract generates proprietary training data that improves Engine 2's predictive power, which in turn increases the commercial value of each new service contract. This compounding advantage is difficult for a generic iPSC contract lab or an academic core facility to replicate — they have the wet-lab capability, but not the AI layer built specifically for this question.</p>
+  <!-- ============ WHO BENEFITS ============ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Who benefits</span>
+        <h2 class="section-title">Three groups, three different wins</h2>
+        <p>The same underlying measurement answers a different question for each of them.</p>
+      </div>
 
-        <p style="margin-top:40px;"><a href="platform.html" class="btn btn-ghost">See how the two engines work together →</a> &nbsp; <a href="evidence.html" class="btn btn-ghost">See the validated results →</a></p>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-tag">Clinicians</span>
+          <h3>Something concrete to tell the family</h3>
+          <p>Psychiatrists and genetic counsellors currently have to explain that a result is "uncertain". A functional risk profile gives them an evidence-based signal to support counselling, monitoring decisions and earlier referral — rather than another probability drawn from a population table.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Biotech &amp; pharma</span>
+          <h3>Trials that aren't sabotaged by hidden variability</h3>
+          <p>Companies developing neuro-therapeutics can select participants by what their cells actually do, and test candidate compounds on human neurons carrying real patient mutations — before committing to a trial with a 90%-plus failure rate.</p>
+        </div>
+        <div class="card">
+          <span class="card-tag">Researchers</span>
+          <h3>A dataset that doesn't exist yet</h3>
+          <p>Every profiled line adds molecular data tied to a known mutation and a controlled perturbation. That supports causal questions, not just correlational ones — and the analysis pipeline is open-source.</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <a href="platform.html" class="btn btn-primary">See how the two engines work →</a>
+        <a href="impact.html" class="btn btn-ghost">See the wider impact →</a>
       </div>
     </div>
   </section>
@@ -90,9 +149,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
     <div class="footer-links">
-      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:stemazing.advancement@gmail.com">Email</a>
     </div>
   </div>

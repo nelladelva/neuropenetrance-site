@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Evidence — NeuroPenetrance</title>
-<meta name="description" content="A validated proof of concept for NeuroPenetrance — real AUC numbers, permutation testing, published benchmark comparisons, and the scientific literature behind the approach.">
+<meta name="description" content="A tested result, not a pitch-deck number: real accuracy figures from public patient data, honest limitations, and the peer-reviewed literature behind the approach.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,17 @@
 
 <header class="site-header">
   <div class="wrap nav-row">
-    <a href="index.html" class="wordmark">NeuroPenetrance</a>
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
+      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
+        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
+        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
+      </svg>
+      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
+    </a>
     <nav class="primary-nav" id="primaryNav">
       <a href="problem.html">The Problem</a>
       <a href="idea.html">The Idea</a>
@@ -24,9 +34,7 @@
       <a href="evidence.html" class="active">Evidence</a>
       <a href="impact.html">Impact</a>
       <a href="team.html">Team</a>
-      <a href="involved.html">Get Involved</a>
-      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
-      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
   </div>
@@ -36,44 +44,50 @@
 
   <div class="page-header">
     <div class="wrap">
-      <a href="index.html" class="breadcrumb">← Back to overview</a>
+      <a href="index.html" class="breadcrumb">← Back to home</a>
       <span class="eyebrow">The evidence</span>
       <h1>Not a pitch-deck number — a tested result</h1>
-      <p class="lede">Before a single proprietary iPSC sample is run, the core analytical pipeline has already been built and validated end-to-end on public data.</p>
+      <p class="lede">Before a single commercial sample was ever run, the prediction engine was built and tested from end to end on public patient data. Here are the actual numbers, including the parts that didn't work.</p>
     </div>
   </div>
 
   <section>
     <div class="wrap">
-      <div class="evidence-console">
+
+      <div class="plain-box" style="max-width:var(--read); margin-top:0; margin-bottom:38px;">
+        <span class="plain-label">How to read these numbers</span>
+        <p>The score below (statisticians call it AUC) runs from 0.50 to 1.00. <strong>0.50 means the model is guessing</strong> — no better than a coin flip. <strong>1.00 would be perfect.</strong> Anything meaningfully above 0.50 means there is real biological signal in the data. For comparison, published genetic risk scores for depression sit around 0.57–0.63.</p>
+      </div>
+
+      <div class="console">
         <div class="console-top">
           <span class="dataset-id">GSE98793 · NCBI Gene Expression Omnibus</span>
-          <span class="dataset-meta">192 samples · 128 MDD patients + 64 controls · 22,880 gene features · public, zero-cost data</span>
+          <span class="dataset-meta">192 samples · 128 patients + 64 controls · 22,880 genes · public, zero-cost data</span>
         </div>
 
         <div class="console-grid">
           <div>
             <div class="auc-bars" id="aucBars">
               <div class="bar-row">
-                <div class="bar-label"><span>Random baseline</span><b>0.500</b></div>
+                <div class="bar-label"><span>Random guessing</span><b>0.500</b></div>
                 <div class="bar-track"><div class="bar-fill baseline" data-target="50"></div></div>
               </div>
               <div class="bar-row">
-                <div class="bar-label"><span>Full transcriptome model</span><b>0.654</b></div>
+                <div class="bar-label"><span>Full model, all 22,880 genes</span><b>0.654</b></div>
                 <div class="bar-track"><div class="bar-fill full" data-target="65.4"></div></div>
-                <div class="bar-sub">Permutation-tested, p = 0.010 (200 shuffled label sets) — outperformed 99% of null models</div>
+                <div class="bar-sub">Tested against 200 randomly shuffled datasets (p = 0.010) — it beat 99% of them, so this is not a fluke of the data.</div>
               </div>
               <div class="bar-row">
-                <div class="bar-label"><span>10-gene immune signature</span><b>0.772</b></div>
+                <div class="bar-label"><span>Compact 10-gene signature</span><b>0.772</b></div>
                 <div class="bar-track"><div class="bar-fill signature" data-target="77.2"></div></div>
-                <div class="bar-sub">A compact, interpretable score that outperformed the full 22,880-gene model</div>
+                <div class="bar-sub">A small, readable score that outperformed the full 22,880-gene model.</div>
               </div>
             </div>
           </div>
 
           <div>
             <div class="gene-block inflam">
-              <div class="gh">INFLAMMATION / NEUTROPHIL MARKERS</div>
+              <div class="gh">INFLAMMATION MARKERS</div>
               <div class="gene-chips">
                 <span class="gene-chip">HP</span>
                 <span class="gene-chip">MMP8</span>
@@ -81,7 +95,7 @@
               </div>
             </div>
             <div class="gene-block lymph">
-              <div class="gh">LYMPHOCYTE / T-CELL &amp; NK-CELL MARKERS</div>
+              <div class="gh">IMMUNE CELL MARKERS</div>
               <div class="gene-chips">
                 <span class="gene-chip">TRA</span>
                 <span class="gene-chip">KLRB1</span>
@@ -89,92 +103,130 @@
                 <span class="gene-chip">SH2D1A</span>
               </div>
             </div>
-            <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.6; margin-top:6px;">Co-expression clustering revealed these two anti-correlated biological blocks — the basis of the 10-gene composite score above.</p>
+            <p style="font-size:.88rem; color:var(--text-mid); line-height:1.65; margin-top:8px;">These two groups of genes moved in opposite directions between patients and controls. That mirror-image pattern is what the 10-gene score above is built from — and it is biologically interpretable, not a black box.</p>
           </div>
         </div>
 
-        <p class="evidence-footnote">All five hypotheses behind this analysis were pre-registered before the data was touched; two were honestly reported as rejected. That same standard of transparent, reproducible methodology carries forward to every proprietary dataset Engine 1 generates. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">View the code and methodology on GitHub →</a></p>
+        <p class="console-note">All five hypotheses were written down before the data was touched — and two of them were wrong, which is reported here rather than quietly dropped. The same standard applies to every dataset the platform generates. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">View the code and methodology on GitHub →</a></p>
       </div>
 
       <div class="article" style="margin-top:56px;">
-        <h2>Signal is distributed, not compressible</h2>
-        <p>Contrary to the initial hypothesis, predictive performance did not concentrate in a small gene panel — it improved as more features were included, reaching an AUC of 0.704 at 5,000 genes. This demonstrates that neurodevelopmental- and psychiatric-relevant molecular signals are distributed across the transcriptome rather than compressible into a simple panel — directly validating the rationale for Engine 1's deep, multi-omics profiling approach over simpler single-marker assays.</p>
+        <h2>What we got wrong</h2>
+        <p>The starting assumption was that a handful of genes would carry most of the predictive power. That turned out to be false. Accuracy kept climbing as more genes were added, reaching 0.704 at 5,000 genes before the compact signature was engineered separately.</p>
+        <p>That failed hypothesis is one of the more useful results here. It says the biological signal in these conditions is <strong>spread across the whole system</strong> rather than concentrated in a few markers — which is exactly the argument for deep, whole-system profiling rather than a cheap single-marker test.</p>
 
-        <h2>How this compares to published benchmarks</h2>
-        <p>Published academic work combining polygenic scores and family genetic risk scores for major depressive disorder reports prediction accuracy in the AUC 0.57–0.63 range, using the iPSYCH cohort. That range is directly comparable to — and in some configurations lower than — the AUC 0.654–0.772 range demonstrated in this proof-of-concept. In other words, these results are competitive with published state-of-the-art benchmarks, not merely a promising early signal.</p>
-        <div class="stat-row stat-row-3" style="margin-top:24px;">
+        <h2>How this compares to published work</h2>
+        <p>Academic work combining polygenic scores with family genetic risk scores for major depression, using the large iPSYCH cohort, reports accuracy in the 0.57–0.63 range. Our proof of concept reached 0.654–0.772 — on a smaller dataset, but using the same kind of measure.</p>
+        <p>In other words, this is competitive with published state-of-the-art work, not merely a promising early signal. And it was achieved on whole blood — a noisier, less direct source than the patient-derived neurons the platform is designed to profile.</p>
+
+        <div class="stat-row" style="margin-top:26px;">
           <div class="stat-cell">
             <div class="num small">0.57–0.63</div>
-            <div class="label">published AUC range, polygenic + family risk scores for MDD (iPSYCH cohort)</div>
+            <div class="label">published DNA-based risk scores for major depression (iPSYCH cohort)</div>
           </div>
           <div class="stat-cell">
             <div class="num small">0.654</div>
-            <div class="label">this proof-of-concept's full-transcriptome model, permutation-validated</div>
+            <div class="label">our full model, validated against 200 shuffled datasets</div>
           </div>
           <div class="stat-cell">
             <div class="num small">0.772</div>
-            <div class="label">this proof-of-concept's compact 10-gene immune signature</div>
+            <div class="label">our compact, interpretable 10-gene signature</div>
           </div>
+        </div>
+
+        <div class="callout">
+          <span class="callout-label">Being straight about the limits</span>
+          <p>This is a proof of concept on public blood data from adults with depression. It is not a clinical test, it is not regulator-approved, and it has not yet been run on patient-derived neurons — that is what the laboratory engine is being built to do. What it demonstrates is that the analytical pipeline works, that it finds real and interpretable biology, and that it holds up to honest statistical testing.</p>
         </div>
       </div>
 
-      <div class="rationale-block">
+      <!-- ===== LITERATURE ===== -->
+      <div style="margin-top:64px;">
         <div class="section-head" style="margin-bottom:26px;">
-          <span class="eyebrow">The scientific rationale</span>
-          <h2 class="section-title" style="font-size:1.28rem;">Why genetics, genetic modifiers, and proteomics are valid risk signals</h2>
-          <p>This isn't a novel claim — it's the direction the published literature already points. Click through the evidence base behind each layer of the platform.</p>
+          <span class="eyebrow">The published science</span>
+          <h2 class="section-title" style="font-size:1.4rem;">Why this approach is grounded, not speculative</h2>
+          <p>None of the underlying claims are novel on their own. Each one is where the peer-reviewed literature already points. Click through the evidence behind each layer.</p>
         </div>
 
-        <div class="rationale-tabs" role="tablist" aria-label="Scientific rationale categories">
-          <button class="rationale-tab active" role="tab" aria-selected="true" data-tab="genetics" type="button">Genetic Risk Variants</button>
-          <button class="rationale-tab" role="tab" aria-selected="false" data-tab="modifiers" type="button">Genetic Modifiers &amp; Penetrance</button>
-          <button class="rationale-tab" role="tab" aria-selected="false" data-tab="proteomics" type="button">Proteomics as a Clinical Tool</button>
+        <div class="tabs" role="tablist" aria-label="Scientific rationale">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="penetrance" type="button">Penetrance</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cells" type="button">Patient-derived cells</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="genetics" type="button">Genetic risk scores</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="blood" type="button">Molecular biomarkers</button>
         </div>
 
-        <div class="rationale-panels">
-          <div class="rationale-panel active" id="panel-genetics" role="tabpanel">
-            <p>Genome-wide association studies have linked thousands of variants to psychiatric disorders. Individually, each carries only a small effect — but aggregated into a polygenic risk score, they form a reproducible signal already used for research-grade risk stratification. Recent appraisals frame near-term clinical translation as chiefly a validation and communication challenge, not a scientific one.</p>
+        <div class="tab-panels">
+          <div class="tab-panel" id="panel-penetrance" role="tabpanel">
+            <p>Carrying a pathogenic variant is not the same as developing disease. Modifier genes, epigenetics and environment all shape whether a mutation produces illness — which is why penetrance in neurodevelopmental conditions is so often incomplete. Most strikingly, a 2026 re-analysis found that many published penetrance figures were substantially inflated, with some variants dropping from an assumed 10–40% to near zero. That is the gap NeuroPenetrance exists to measure directly.</p>
             <div class="citation-list">
-              <a class="citation-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10576695/" target="_blank" rel="noopener">
-                <span class="citation-title">Clinical utility of polygenic risk scores: a critical 2023 appraisal</span>
-                <span class="citation-meta">Koch et al. · Journal of Community Genetics, 2023</span>
+              <a class="citation-card" href="https://www.nature.com/articles/s41431-025-01948-0" target="_blank" rel="noopener">
+                <span class="citation-title">Updated penetrance estimates for recurrent copy number variants — an improved definition and formula</span>
+                <span class="citation-meta">Goh et al. · European Journal of Human Genetics · 2026</span>
               </a>
-              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/32770057/" target="_blank" rel="noopener">
-                <span class="citation-title">Polygenic risk score as clinical utility in psychiatry: a clinical viewpoint</span>
-                <span class="citation-meta">Fujii et al. · Journal of Human Genetics, 2020</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="rationale-panel" id="panel-modifiers" role="tabpanel" hidden>
-            <p>Carrying a pathogenic variant is not the same as developing disease. A growing body of literature shows that genetic modifiers — secondary variants that enhance or suppress a primary mutation's effect — along with epigenetic and environmental factors, are a major reason penetrance is incomplete in neurogenetic and neurodevelopmental disorders. That gap is precisely what NeuroPenetrance is built to quantify.</p>
-            <div class="citation-list">
               <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/42471092/" target="_blank" rel="noopener">
                 <span class="citation-title">Incomplete penetrance in neurogenetic disorders: current insights and emerging perspectives</span>
-                <span class="citation-meta">ScienceDirect / PubMed, 2026</span>
+                <span class="citation-meta">PubMed · 2026</span>
               </a>
               <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/38453051/" target="_blank" rel="noopener">
                 <span class="citation-title">Penetrance, variable expressivity and monogenic neurodevelopmental disorders</span>
-                <span class="citation-meta">Isidor et al., 2024</span>
+                <span class="citation-meta">Isidor et al. · 2024</span>
+              </a>
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/38054408/" target="_blank" rel="noopener">
+                <span class="citation-title">Recommendations for risk allele curation, classification and reporting — ClinGen Low Penetrance Working Group</span>
+                <span class="citation-meta">Schmidt et al. · Genetics in Medicine · 2024</span>
               </a>
             </div>
           </div>
 
-          <div class="rationale-panel" id="panel-proteomics" role="tabpanel" hidden>
-            <p>No clinical guideline currently includes a blood-based test for depression — diagnosis still relies entirely on symptom interviews. Proteomic profiling of blood is the leading candidate to close that gap: a decade of studies has identified reproducible candidate protein signatures, and researchers increasingly frame large-scale validation, not discovery, as the remaining barrier to clinical use.</p>
+          <div class="tab-panel" id="panel-cells" role="tabpanel" hidden>
+            <p>Growing a patient's own cells into neurons is now an established way to study brain conditions in human biology rather than in animal proxies. The field's own recent framing is that combining these models with multi-omics measurement and computational analysis is precisely what moves the work toward patient-specific diagnostics — which is the thesis this company is built on.</p>
+            <div class="citation-list">
+              <a class="citation-card" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12647108/" target="_blank" rel="noopener">
+                <span class="citation-title">Advancing neurodevelopmental disorder models with human iPSC and multi-omics integration</span>
+                <span class="citation-meta">Afshar-Saber, Metodieva &amp; D'Amore · Frontiers in Neuroscience · 2025</span>
+              </a>
+              <a class="citation-card" href="https://link.springer.com/article/10.1186/s13073-017-0512-3" target="_blank" rel="noopener">
+                <span class="citation-title">Modeling psychiatric disorders using patient stem cell-derived neurons: a way forward</span>
+                <span class="citation-meta">Genome Medicine</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-genetics" role="tabpanel" hidden>
+            <p>Genome-wide studies have linked thousands of variants to psychiatric conditions. Each one carries a tiny effect alone, but combined into a polygenic risk score they produce a reproducible signal already used for research-grade risk stratification. Recent appraisals describe the remaining barrier to clinical use as validation and communication rather than discovery — and that is the layer functional cellular data is meant to strengthen.</p>
+            <div class="citation-list">
+              <a class="citation-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10576695/" target="_blank" rel="noopener">
+                <span class="citation-title">Clinical utility of polygenic risk scores: a critical appraisal</span>
+                <span class="citation-meta">Koch et al. · Journal of Community Genetics · 2023</span>
+              </a>
+              <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/32770057/" target="_blank" rel="noopener">
+                <span class="citation-title">Polygenic risk score as clinical utility in psychiatry: a clinical viewpoint</span>
+                <span class="citation-meta">Fujii et al. · Journal of Human Genetics · 2020</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="panel-blood" role="tabpanel" hidden>
+            <p>No clinical guideline currently includes a molecular test for depression — diagnosis still rests entirely on symptom interviews. Protein and gene-expression profiling is the leading candidate to change that: a decade of work has produced reproducible candidate signatures, and researchers increasingly describe large-scale validation, not discovery, as the remaining obstacle.</p>
             <div class="citation-list">
               <a class="citation-card" href="https://pubmed.ncbi.nlm.nih.gov/29466886/" target="_blank" rel="noopener">
                 <span class="citation-title">Proteomic approaches to identify blood-based biomarkers for depression and bipolar disorders</span>
-                <span class="citation-meta">Expert Review of Proteomics, 2018</span>
+                <span class="citation-meta">Expert Review of Proteomics · 2018</span>
               </a>
               <a class="citation-card" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11184055/" target="_blank" rel="noopener">
                 <span class="citation-title">Serum proteomic analysis uncovers novel serum biomarkers for depression</span>
-                <span class="citation-meta">Frontiers in Psychiatry, 2024</span>
+                <span class="citation-meta">Frontiers in Psychiatry · 2024</span>
               </a>
             </div>
           </div>
         </div>
+
+        <div class="btn-row">
+          <a href="https://neuropenetrance.streamlit.app" class="btn btn-primary" target="_blank" rel="noopener">Try the live demo</a>
+          <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-ghost" target="_blank" rel="noopener">View the source code</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -182,9 +234,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
     <div class="footer-links">
-      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:stemazing.advancement@gmail.com">Email</a>
     </div>
   </div>

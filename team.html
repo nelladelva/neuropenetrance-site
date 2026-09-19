@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Team — NeuroPenetrance</title>
-<meta name="description" content="The founder and academic mentor behind NeuroPenetrance, and the rare combination of wet-lab and data-science expertise driving the platform.">
+<meta name="description" content="NeuroPenetrance is built by Nella Christie Delva, PhD — a neuroscientist and data scientist — with Dr. Annette Hammes-Lewin of the Max Delbrück Center as academic mentor.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,17 @@
 
 <header class="site-header">
   <div class="wrap nav-row">
-    <a href="index.html" class="wordmark">NeuroPenetrance</a>
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
+      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
+        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
+        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
+      </svg>
+      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
+    </a>
     <nav class="primary-nav" id="primaryNav">
       <a href="problem.html">The Problem</a>
       <a href="idea.html">The Idea</a>
@@ -24,9 +34,7 @@
       <a href="evidence.html">Evidence</a>
       <a href="impact.html">Impact</a>
       <a href="team.html" class="active">Team</a>
-      <a href="involved.html">Get Involved</a>
-      <a href="neuropenetrance-de.html" class="lang-switch">DE</a>
-      <a href="https://neuropenetrance.streamlit.app" class="nav-cta" target="_blank" rel="noopener">Try the model</a>
+      <a href="contact.html" class="nav-cta">Get in touch</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
   </div>
@@ -36,38 +44,51 @@
 
   <div class="page-header">
     <div class="wrap">
-      <a href="index.html" class="breadcrumb">← Back to overview</a>
-      <span class="eyebrow">Team &amp; mentors</span>
-      <h1>Built at the intersection of the bench and the notebook</h1>
-      <p class="lede">NeuroPenetrance is developed at the Max Delbrück Center for Molecular Medicine (MDC) in Berlin, one of Germany's leading research centers for molecular medicine.</p>
+      <a href="index.html" class="breadcrumb">← Back to home</a>
+      <span class="eyebrow">Team</span>
+      <h1>Two people, both sides of the problem</h1>
+      <p class="lede">NeuroPenetrance needs someone who can work at the lab bench and someone who can build the models. It happens to be the same person — supported by the scientist whose laboratory defined the underlying biology.</p>
     </div>
   </div>
 
   <section>
     <div class="wrap">
-      <div class="founder-block">
+
+      <div class="person">
         <div class="avatar">ND</div>
         <div>
           <h3>Nella Christie Delva, PhD</h3>
-          <span class="role">Founder — Neuroscientist &amp; Data Analyst</span>
-          <p>Nella's doctoral research at Florida State University examined D1 dopamine receptor signaling in the medial prefrontal cortex and its role in stress resiliency and mood regulation. She is a Fulbright Research Fellow, a McKnight Doctoral Fellow, and a recipient of the Germanistic Society of America Award.</p>
-          <p>Her Fulbright fellowship placed her at the Max Delbrück Center for Molecular Medicine in Berlin, working hands-on in the Hammes Lab with iPSC culturing, differentiation, immunohistochemistry, and fluorescent imaging — the direct scientific foundation behind NeuroPenetrance's Engine 1. She built and validated the Engine 2 machine-learning pipeline independently, pairing that lab background with formal data science training in Python, SQL, and machine learning.</p>
+          <span class="role">Founder — Neuroscientist &amp; Data Scientist</span>
+          <p>Nella's doctoral research at Florida State University examined dopamine signalling in the prefrontal cortex and its role in stress resilience and mood — in other words, why some brains cope with pressure and others don't. That question is the direct ancestor of this company.</p>
+          <p>A Fulbright Research Fellowship brought her to the Max Delbrück Center for Molecular Medicine in Berlin, where she worked hands-on in the Hammes-Lewin laboratory with patient-derived stem cells: growing them, turning them into neurons, and imaging what those neurons became. That is the scientific foundation of the laboratory engine.</p>
+          <p>She then built and validated the machine learning engine independently, pairing that bench background with formal data science training in Python, SQL and machine learning. She is also a McKnight Doctoral Fellow and a recipient of the Germanistic Society of America Award.</p>
         </div>
       </div>
 
-      <div class="founder-block" style="margin-bottom:0;">
+      <div class="person" style="margin-bottom:0;">
         <div class="avatar">AH</div>
         <div>
-          <h3>Dr. Annette Hammes</h3>
-          <span class="role">Academic Mentor — MDC Berlin</span>
-          <p>Group Leader, Molecular Pathways in Cortical Development, at the Max Delbrück Center for Molecular Medicine. Dr. Hammes' research focuses on Sonic Hedgehog (SHH) signaling in forebrain development — the biological foundation underlying NeuroPenetrance's model of incomplete penetrance. Her laboratory provides the validated hiPSC lines, differentiation protocols, and research infrastructure that underpin Engine 1, committed as in-kind support for NeuroPenetrance.</p>
+          <h3>Dr. Annette Hammes-Lewin</h3>
+          <span class="role">Academic Mentor — Max Delbrück Center, Berlin</span>
+          <p>Group Leader for Molecular Pathways in Cortical Development at the Max Delbrück Center for Molecular Medicine. Her laboratory studies Sonic Hedgehog signalling in forebrain development — the developmental system that sits underneath NeuroPenetrance's entire model of incomplete penetrance.</p>
+          <p>Her group provides the validated stem cell lines, the differentiation protocols and the research infrastructure behind the laboratory engine, committed as in-kind support to the company.</p>
         </div>
       </div>
 
       <div class="article" style="margin-top:56px;">
-        <h2>Why this team</h2>
-        <p>NeuroPenetrance's founding team spans both product engines by design. Experimental neuroscience — hiPSC workflows, RNAscope, immunohistochemistry, multi-omics, electrophysiology — sits alongside data analytics and machine learning — SQL, Python, BigQuery, Pandas, scikit-learn, Plotly. That rare combination means both engines can be developed by the founding team in Year 1, without requiring an external technical co-founder — a meaningful cost and speed advantage during the earliest, highest-risk phase of the company.</p>
+        <h2>Why a team of two is the right size right now</h2>
+        <p>Most companies in this space need at least two founders: a wet-lab scientist and a machine learning engineer. Here, both skill sets sit in one person — experimental neuroscience on one side, data analytics and machine learning on the other.</p>
+        <p>That means both engines can be developed in year one without hiring an external technical co-founder, which is a real advantage of cost and speed in the earliest and riskiest phase of a company. The mentorship and laboratory infrastructure from the Hammes-Lewin group cover the rest.</p>
+
+        <div class="callout">
+          <p>NeuroPenetrance is actively looking for collaborators, pilot partners and advisors — particularly clinical geneticists, biotech R&amp;D teams working on neuro-therapeutics, and research groups with relevant patient cell lines. If that sounds like you, <a href="contact.html" class="inline">get in touch</a>.</p>
+        </div>
+
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary">Start a conversation →</a>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -75,9 +96,10 @@
 
 <footer class="site-footer">
   <div class="wrap footer-row">
-    <p>NeuroPenetrance draws on research conducted during a Fulbright Fellowship at the Max Delbrück Center for Molecular Medicine, Berlin. © 2026 Nella Christie Delva.</p>
+    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
     <div class="footer-links">
-      <a href="https://github.com/nelladelva" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
+      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:stemazing.advancement@gmail.com">Email</a>
     </div>
   </div>
