@@ -52,63 +52,54 @@
       </ul>
 
       <div class="mailto-card" style="max-width:560px; margin-top:40px;">
-        <div id="involvedSuccess" style="display:none;">
-          <h3>Thank you</h3>
-          <p>We've received your response — if you offered to follow up, we'll be in touch. We appreciate you taking the time.</p>
-        </div>
-        <div id="involvedFormWrap">
-          <h3>Share your interest</h3>
-          <p>Your response is submitted directly to us and helps us understand who's interested in NeuroPenetrance — nothing else is stored on this site.</p>
-          <form id="interestForm" action="https://formspree.io/f/xeaqbkzb" method="POST">
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <input type="hidden" name="_subject" value="NeuroPenetrance interest form submission">
-            <input type="hidden" name="_next" value="https://nelladelva.github.io/neuropenetrance-site/involved.html?sent=true">
-            <div class="field">
-              <label for="if-name">NAME (OPTIONAL)</label>
-              <input type="text" id="if-name" name="name">
-            </div>
-            <div class="field">
-              <label for="if-email">EMAIL (OPTIONAL — ONLY IF YOU'D LIKE US TO FOLLOW UP)</label>
-              <input type="email" id="if-email" name="email">
-            </div>
-            <div class="field">
-              <label for="if-role">WHAT BEST DESCRIBES YOU?</label>
-              <select id="if-role" name="role" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
-                <option value="Pharma / Biotech R&D">Pharma / Biotech R&amp;D</option>
-                <option value="Clinical genetics / diagnostics lab">Clinical genetics / diagnostics lab</option>
-                <option value="Academic researcher">Academic researcher</option>
-                <option value="Contract Research Organization (CRO)">Contract Research Organization (CRO)</option>
-                <option value="Clinician">Clinician</option>
-                <option value="Patient / family member">Patient / family member</option>
-                <option value="Investor">Investor</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="if-interest">WHAT'S YOUR INTEREST IN NEUROPENETRANCE?</label>
-              <select id="if-interest" name="interest" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
-                <option value="A pilot engagement (Engine 1 service)">A pilot engagement (Engine 1 service)</option>
-                <option value="The AI biomarker platform (Engine 2 SaaS)">The AI biomarker platform (Engine 2 SaaS)</option>
-                <option value="Research collaboration">Research collaboration</option>
-                <option value="Just curious / following along">Just curious / following along</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="if-conversation">OPEN TO A 15-MINUTE CONVERSATION?</label>
-              <select id="if-conversation" name="conversation" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
-                <option value="Yes">Yes</option>
-                <option value="Maybe later">Maybe later</option>
-                <option value="No">No</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="if-msg">ANYTHING ELSE YOU'D LIKE TO SHARE?</label>
-              <textarea id="if-msg" name="message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-top:6px;">Send my interest</button>
-          </form>
-        </div>
+        <h3>Share your interest</h3>
+        <p>This opens a pre-filled email in your mail app, addressed to us — nothing is stored on this site itself.</p>
+        <form id="interestForm">
+          <div class="field">
+            <label for="if-name">NAME (OPTIONAL)</label>
+            <input type="text" id="if-name" name="name">
+          </div>
+          <div class="field">
+            <label for="if-email">EMAIL (OPTIONAL — ONLY IF YOU'D LIKE US TO FOLLOW UP)</label>
+            <input type="email" id="if-email" name="email">
+          </div>
+          <div class="field">
+            <label for="if-role">WHAT BEST DESCRIBES YOU?</label>
+            <select id="if-role" name="role" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
+              <option value="Pharma / Biotech R&D">Pharma / Biotech R&amp;D</option>
+              <option value="Clinical genetics / diagnostics lab">Clinical genetics / diagnostics lab</option>
+              <option value="Academic researcher">Academic researcher</option>
+              <option value="Contract Research Organization (CRO)">Contract Research Organization (CRO)</option>
+              <option value="Clinician">Clinician</option>
+              <option value="Patient / family member">Patient / family member</option>
+              <option value="Investor">Investor</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="if-interest">WHAT'S YOUR INTEREST IN NEUROPENETRANCE?</label>
+            <select id="if-interest" name="interest" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
+              <option value="A pilot engagement (Engine 1 service)">A pilot engagement (Engine 1 service)</option>
+              <option value="The AI biomarker platform (Engine 2 SaaS)">The AI biomarker platform (Engine 2 SaaS)</option>
+              <option value="Research collaboration">Research collaboration</option>
+              <option value="Just curious / following along">Just curious / following along</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="if-conversation">OPEN TO A 15-MINUTE CONVERSATION?</label>
+            <select id="if-conversation" name="conversation" required style="width:100%; background:var(--bg); border:1px solid var(--line-strong); border-radius:2px; color:var(--ink); padding:10px 12px; font-family:var(--sans); font-size:0.9rem;">
+              <option value="Yes">Yes</option>
+              <option value="Maybe later">Maybe later</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="if-msg">ANYTHING ELSE YOU'D LIKE TO SHARE?</label>
+            <textarea id="if-msg" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:6px;">Send my interest</button>
+        </form>
       </div>
     </div>
   </section>
