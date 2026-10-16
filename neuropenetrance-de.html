@@ -488,13 +488,13 @@
       <div class="section-head">
         <span class="eyebrow">Die Evidenz</span>
         <h2 class="section-title">Keine Pitch-Deck-Zahl — ein geprüftes Ergebnis</h2>
-        <p>Bevor auch nur eine einzige proprietäre iPSC-Probe analysiert wird, ist die zentrale analytische Pipeline bereits vollständig aufgebaut und anhand öffentlicher Daten validiert.</p>
+        <p>Bevor auch nur eine einzige proprietäre iPSC-Probe analysiert wird, ist die zentrale analytische Pipeline bereits vollständig aufgebaut und an Studien getestet, die sie nie zuvor gesehen hat.</p>
       </div>
 
       <div class="evidence-console">
         <div class="console-top">
-          <span class="dataset-id">GSE98793 · NCBI Gene Expression Omnibus</span>
-          <span class="dataset-meta">192 Proben · 128 MDD-Patient:innen + 64 Kontrollen · 22.880 Genmerkmale · öffentliche, kostenfreie Daten</span>
+          <span class="dataset-id">8 öffentliche Vollblut-Studien · NCBI Gene Expression Omnibus</span>
+          <span class="dataset-meta">779 Personen · 429 mit Depression + 350 Gesunde · verschiedene Labore und Plattformen · öffentliche, kostenfreie Daten</span>
         </div>
 
         <div class="console-grid">
@@ -505,14 +505,19 @@
                 <div class="bar-track"><div class="bar-fill baseline" data-target="50"></div></div>
               </div>
               <div class="bar-row">
-                <div class="bar-label"><span>Vollständiges Transkriptom-Modell</span><b>0,654</b></div>
-                <div class="bar-track"><div class="bar-fill full" data-target="65.4"></div></div>
-                <div class="bar-sub">Permutationsgetestet, p = 0,010 (200 zufällig vertauschte Label-Sets) — übertraf 99 % der Nullmodelle</div>
+                <div class="bar-label"><span>Gebaut auf: GSE98793 (192 Personen)</span><b>0,755</b></div>
+                <div class="bar-track"><div class="bar-fill full" data-target="75.5"></div></div>
+                <div class="bar-sub">Die Studie, an der die Gene ausgewählt wurden. Immer die schmeichelhafteste Zahl.</div>
               </div>
               <div class="bar-row">
-                <div class="bar-label"><span>10-Gen-Immunsignatur</span><b>0,772</b></div>
-                <div class="bar-track"><div class="bar-fill signature" data-target="77.2"></div></div>
-                <div class="bar-sub">Ein kompakter, interpretierbarer Score, der das vollständige 22.880-Gen-Modell übertraf</div>
+                <div class="bar-label"><span>Getestet auf 7 neuen Studien, unverändert</span><b>0,613</b></div>
+                <div class="bar-track"><div class="bar-fill signature" data-target="61.3"></div></div>
+                <div class="bar-sub">Durchschnitt über 7 unabhängige Studien. Über dem Zufall in allen 8 Studien; Permutationstest p &lt; 0,001.</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label"><span>Standard-Blutbild (Neutrophilen-Lymphozyten-Verhältnis)</span><b>0,611</b></div>
+                <div class="bar-track"><div class="bar-fill baseline" data-target="61.1"></div></div>
+                <div class="bar-sub">Dieselben 7 Studien. Ein ehrlicher Realitätscheck: Das Signal spiegelt vor allem die Zusammensetzung der weißen Blutkörperchen wider.</div>
               </div>
             </div>
           </div>
@@ -529,17 +534,16 @@
             <div class="gene-block lymph">
               <div class="gh">LYMPHOZYTEN / T-ZELL- &amp; NK-ZELL-MARKER</div>
               <div class="gene-chips">
-                <span class="gene-chip">TRA</span>
                 <span class="gene-chip">KLRB1</span>
                 <span class="gene-chip">KLRG1</span>
                 <span class="gene-chip">SH2D1A</span>
               </div>
             </div>
-            <p style="font-size:0.86rem; color:var(--text-mid); line-height:1.6; margin-top:6px;">Ko-Expressions-Clustering zeigte diese zwei gegenläufig korrelierten biologischen Blöcke — die Grundlage des oben gezeigten 10-Gen-Composite-Scores.</p>
+            <p style="font-size:0.86rem; color:var(--text-mid); line-height:1.6; margin-top:6px;">Ko-Expressions-Clustering zeigte diese zwei gegenläufig korrelierten biologischen Blöcke — die Grundlage des oben gezeigten 6-Gen-Scores: eine Gruppe minus die andere, ohne verstecktes Modell.</p>
           </div>
         </div>
 
-        <p class="evidence-footnote">Alle fünf Hypothesen dieser Analyse wurden präregistriert, bevor die Daten angefasst wurden; zwei wurden ehrlich als verworfen berichtet. Derselbe Standard an transparenter, reproduzierbarer Methodik gilt für jeden proprietären Datensatz, den Engine 1 künftig erzeugt. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">Code und Methodik auf GitHub ansehen →</a></p>
+        <p class="evidence-footnote">Die wichtigsten Tests wurden geplant, bevor die Ergebnisse vorlagen, und jedes Ergebnis wird berichtet, auch die, die nicht funktioniert haben. Derselbe Standard an transparenter, reproduzierbarer Methodik gilt für jeden proprietären Datensatz, den Engine 1 künftig erzeugt. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">Code und Live-App auf GitHub ansehen →</a></p>
       </div>
 
       <div class="rationale-block">
@@ -658,7 +662,7 @@
       <div>
         <span class="eyebrow">Selbst ausprobieren</span>
         <h2>Sehen Sie sich das Signal selbst an</h2>
-        <p>Die Proof-of-Concept-Klassifikationspipeline ist Open Source und live einsehbar — trainiert und validiert auf dem oben beschriebenen öffentlichen GSE98793-Datensatz. Sie bildet den analytischen Kern, den Engine 2 künftig auf proprietäre, iPSC-abgeleitete Daten erweitern wird.</p>
+        <p>Die Proof-of-Concept-Klassifikationspipeline ist Open Source und live einsehbar — entwickelt auf GSE98793 und getestet auf 7 weiteren unabhängigen öffentlichen Studien. Sie bildet den analytischen Kern, den Engine 2 künftig auf proprietäre, iPSC-abgeleitete Daten erweitern wird.</p>
         <div class="cta-row">
           <a href="https://neuropenetrance.streamlit.app" class="btn btn-primary" target="_blank" rel="noopener">Live-App öffnen</a>
           <a href="https://github.com/nelladelva/neuropenetrance_app" class="btn btn-ghost" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>
@@ -669,8 +673,8 @@
         <div class="row"><span>Live-App</span><span>neuropenetrance.streamlit.app</span></div>
         <div class="row"><span>Repository</span><span>neuropenetrance_app</span></div>
         <div class="row"><span>Framework</span><span>Streamlit</span></div>
-        <div class="row"><span>Stack</span><span>Python · scikit-learn</span></div>
-        <div class="row"><span>Datensatz</span><span>GSE98793 (öffentlich)</span></div>
+        <div class="row"><span>Stack</span><span>Python · pandas · scikit-learn</span></div>
+        <div class="row"><span>Datensätze</span><span>8 öffentliche Studien (GEO)</span></div>
         <div class="row"><span>Status</span><span>Live-Proof-of-Concept</span></div>
       </div>
     </div>
