@@ -217,3 +217,15 @@ textarea { min-height: 130px; resize: vertical; }
 .brand-footer .brand-name span { color: #5FC4CC; }
 .footer-base { border-top: 1px solid rgba(255,255,255,.12); padding: 16px 24px 28px; font-size: 13px; color: #8FA6BA; }
 @media (max-width: 760px) { .footer-inner { grid-template-columns: 1fr; } }
+
+/* carried-over helpers */
+:root { --text-mid: #4C5D6E; --text-dim: #6B7B8C; }
+.btn-ghost { border-color: var(--line); color: var(--navy); background: #fff; }
+.btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
+.section-title { margin-top: 0; }
+.stat-cell .num.small { font-size: 24px; }
+.citation-list { display: grid; gap: 10px; margin-top: 14px; }
+.citation-card { display: block; border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; text-decoration: none; color: inherit; }
+.citation-card:hover { border-color: var(--teal); color: inherit; }
+.citation-title { display: block; font-weight: 600; color: var(--navy); }
+.citation-meta { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }

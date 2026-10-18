@@ -1,58 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evidence — NeuroPenetrance</title>
-<meta name="description" content="A tested result, not a pitch-deck number: real accuracy figures from public patient data, honest limitations, and the peer-reviewed literature behind the approach.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Tested results of the 6-gene blood immune signature on 8 independent public studies, including what did not work.">
+<link rel="canonical" href="https://neuropenetrance.com/evidence.html">
+<link rel="alternate" hreflang="en" href="https://neuropenetrance.com/evidence.html">
+<link rel="alternate" hreflang="de" href="https://neuropenetrance.com/de/evidence.html">
+<link rel="alternate" hreflang="x-default" href="https://neuropenetrance.com/evidence.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Evidence — NeuroPenetrance">
+<meta property="og:description" content="Tested results of the 6-gene blood immune signature on 8 independent public studies, including what did not work.">
+<meta property="og:url" content="https://neuropenetrance.com/evidence.html">
+<meta property="og:image" content="https://neuropenetrance.com/assets/img/og-image.png">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#0D2438">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
-  <div class="wrap nav-row">
-    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
-      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
-        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
-        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
-        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
-      </svg>
-      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
-    </a>
-    <nav class="primary-nav" id="primaryNav">
-      <a href="problem.html">The Problem</a>
-      <a href="idea.html">The Idea</a>
-      <a href="platform.html">Platform</a>
-      <a href="evidence.html" class="active">Evidence</a>
-      <a href="impact.html">Impact</a>
-      <a href="team.html">Team</a>
-      <a href="contact.html" class="nav-cta">Get in touch</a>
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance home"><svg class="brand-icon" viewBox="0 0 44 34" fill="none" aria-hidden="true">
+  <path d="M7 17 H17" stroke="#0D2438" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 10, 29 8" stroke="#0B6E79" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 24, 29 26" stroke="#8FA6BA" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="6" cy="17" r="5" fill="#0D2438"/><circle cx="32.5" cy="7" r="5" fill="#0B6E79"/>
+  <circle cx="33" cy="26.5" r="3.6" stroke="#8FA6BA" stroke-width="2.8"/></svg><span class="brand-name">Neuro<span>Penetrance</span></span></a>
+    <nav class="primary-nav" id="primaryNav" aria-label="Main">
+        <a href="platform.html">Platform</a>
+        <a href="evidence.html" aria-current="page">Evidence</a>
+        <a href="partners.html">For partners</a>
+        <a href="research.html">For researchers</a>
+        <a href="science.html">Science</a>
+        <a href="team.html">Team</a>
+      <div class="lang-switch" aria-label="Language">
+        <a href="evidence.html" hreflang="en" aria-current="true">EN</a>
+        <span aria-hidden="true">·</span>
+        <a href="de/evidence.html" hreflang="de">DE</a>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Open the app ↗</a>
+      <a class="btn btn-primary btn-sm" href="partners.html">Partner with us</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu">☰</button>
   </div>
 </header>
-
 <main id="main">
-
-  <div class="page-header">
-    <div class="wrap">
-      <a href="index.html" class="breadcrumb">← Back to home</a>
+<div class="page-head">
+    <div class="container">
       <span class="eyebrow">The evidence</span>
       <h1>Not a pitch-deck number — a tested result</h1>
       <p class="lede">Before a single commercial sample was run, the analysis engine was built on public patient data and then tested on studies it had never seen. Here are the actual numbers, including the ones that went down.</p>
     </div>
   </div>
 
-  <section>
-    <div class="wrap">
+  <section class="section">
+    <div class="container">
 
       <div class="plain-box" style="max-width:var(--read); margin-top:0; margin-bottom:38px;">
         <span class="plain-label">How to read these numbers</span>
@@ -114,7 +119,7 @@
         <p class="console-note">The main tests were planned before the results were seen, and every result is reported, including the ones that didn't work. The same standard applies to every dataset the platform generates. <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">View the code and the live app on GitHub →</a></p>
       </div>
 
-      <div class="article" style="margin-top:56px;">
+      <div class="prose" style="margin-top:56px;">
         <h2>What we got wrong</h2>
         <p><strong>The first number was too good.</strong> On the study where the genes were found, the signature scored 0.76–0.77. Tested on seven new studies, it scored 0.61. The signal is real (it beat chance in every study), but it is smaller than the first result suggested. This is the most common trap in biomarker research, and we chose to measure it rather than hide it.</p>
         <p><strong>Most of the signal is the white-blood-cell mix.</strong> People with depression in these studies tend to have slightly more neutrophils and fewer lymphocytes. A standard blood count captures this as well as our genes do. Nine more complex models we tried, from small gene panels to machine learning on all genes, did not beat it on new studies.</p>
@@ -238,20 +243,36 @@
 
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
-  <div class="wrap footer-row">
-    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
-    <div class="footer-links">
-      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
-      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:stemazing.advancement@gmail.com">Email</a>
+  <div class="container footer-inner">
+    <div>
+      <a href="index.html" class="brand brand-footer" aria-label="NeuroPenetrance home"><svg class="brand-icon" viewBox="0 0 44 34" fill="none" aria-hidden="true">
+  <path d="M7 17 H17" stroke="#0D2438" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 10, 29 8" stroke="#0B6E79" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 24, 29 26" stroke="#8FA6BA" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="6" cy="17" r="5" fill="#0D2438"/><circle cx="32.5" cy="7" r="5" fill="#0B6E79"/>
+  <circle cx="33" cy="26.5" r="3.6" stroke="#8FA6BA" stroke-width="2.8"/></svg><span class="brand-name">Neuro<span>Penetrance</span></span></a>
+      <p>Blood-based immune profiling for precision psychiatry. Research Use Only.</p>
+      <p><a href="mailto:partnerships@neuropenetrance.com">partnerships@neuropenetrance.com</a></p>
     </div>
+    <nav aria-label="Footer">
+      <a href="platform.html">Platform</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="partners.html">For partners</a>
+      <a href="research.html">For researchers</a>
+      <a href="science.html">Science</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="impressum.html">Legal notice (Impressum)</a>
+      <a href="datenschutz.html">Privacy policy</a>
+      <a href="de/evidence.html" hreflang="de">Deutsch</a>
+    </nav>
   </div>
+  <div class="container footer-base">© 2026 NeuroPenetrance · Research Use Only</div>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
