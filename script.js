@@ -19,6 +19,9 @@
   var bars = document.querySelectorAll('.bar-fill[data-target]');
   if (!bars.length) return;
 
+  // bars render at full width without JavaScript; with it, they animate in from zero
+  bars.forEach(function (bar) { bar.style.width = '0'; });
+
   function fill() {
     bars.forEach(function (bar) {
       bar.style.width = bar.getAttribute('data-target') + '%';

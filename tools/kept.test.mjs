@@ -25,3 +25,11 @@ test('German team and evidence exist and keep the numbers', () => {
   assert.ok(team.includes('Nella Christie Delva'));
   assert.ok(!team.includes('One founder, building both sides'), 'team is translated');
 });
+
+test('evidence bars show their value without JavaScript', () => {
+  for (const p of ['evidence.html', 'de/evidence.html']) {
+    for (const [, target, style] of read(p).matchAll(/class="bar-fill[^"]*" data-target="([\d.]+)"([^>]*)>/g)) {
+      assert.match(style, new RegExp(`style="width:${target}%"`), `${p} bar ${target}`);
+    }
+  }
+});

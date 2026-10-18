@@ -7,8 +7,8 @@ export const UI = {
     contact: 'Contact', legal: 'Legal notice (Impressum)', privacy: 'Privacy policy', langName: 'Deutsch', home: 'NeuroPenetrance home',
   },
   de: {
-    skip: 'Zum Inhalt springen', menu: 'Menü', openApp: 'App öffnen ↗', partner: 'Partnerschaft anfragen',
-    nav: { platform: 'Plattform', evidence: 'Evidenz', partners: 'Für Partner', research: 'Für Forschende', science: 'Wissenschaft', team: 'Team' },
+    skip: 'Zum Inhalt springen', menu: 'Menü', openApp: 'App öffnen ↗', partner: 'Partner werden',
+    nav: { platform: 'Plattform', evidence: 'Evidenz', partners: 'Partner', research: 'Forschende', science: 'Wissenschaft', team: 'Team' },
     footerTag: 'Blutbasiertes Immunprofiling für die Präzisionspsychiatrie. Nur für Forschungszwecke (Research Use Only).',
     contact: 'Kontakt', legal: 'Impressum', privacy: 'Datenschutzerklärung', langName: 'English', home: 'NeuroPenetrance Startseite',
   },
