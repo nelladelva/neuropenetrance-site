@@ -229,3 +229,4 @@ textarea { min-height: 130px; resize: vertical; }
 .citation-card:hover { border-color: var(--teal); color: inherit; }
 .citation-title { display: block; font-weight: 600; color: var(--navy); }
 .citation-meta { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+.form-status.error { color: #A6192E; }
