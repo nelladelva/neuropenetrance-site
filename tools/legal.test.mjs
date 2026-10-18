@@ -32,9 +32,16 @@ test('no forbidden phrases on any page', () => {
 test('impressum has placeholders and a visible note', () => {
   const h = read('de/impressum.html');
   const t = textOf(mainOf(h));
-  for (const s of ['Angaben gemäß § 5 DDG', '[Full legal name]', 'partnerships@neuropenetrance.com']) assert.ok(t.includes(s), s);
+  for (const s of ['Angaben gemäß § 5 DDG', 'Nella Christie Delva', 'Berlin', 'Deutschland', 'partnerships@neuropenetrance.com']) assert.ok(t.includes(s), s);
+  assert.ok(!t.includes('[Full legal name]'), 'name filled in');
+  assert.ok(t.includes('[Straße und Hausnummer]') && t.includes('[PLZ]'), 'street and postcode still marked as missing');
   assert.match(h, /class="todo-note"/);
-  assert.ok(textOf(mainOf(read('impressum.html'))).includes('[Full legal name]'));
+  const en = textOf(mainOf(read('impressum.html')));
+  assert.ok(en.includes('Nella Christie Delva') && en.includes('Berlin') && en.includes('[Street and number]'));
+  for (const p of ['datenschutz.html', 'de/datenschutz.html']) {
+    const d = textOf(mainOf(read(p)));
+    assert.ok(d.includes('Nella Christie Delva') && !d.includes('[Full legal name]'), `${p} controller named`);
+  }
 });
 
 test('datenschutz names the processors', () => {
