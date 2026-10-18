@@ -230,3 +230,8 @@ textarea { min-height: 130px; resize: vertical; }
 .citation-title { display: block; font-weight: 600; color: var(--navy); }
 .citation-meta { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
 .form-status.error { color: #A6192E; }
+.roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.roadmap .card { border-top: 4px solid var(--teal); }
+.roadmap .card.next { border-top-color: #8FA6BA; }
+.roadmap .card.later { border-top-color: #C9D3DD; }
+@media (max-width: 860px) { .roadmap { grid-template-columns: 1fr; } }
