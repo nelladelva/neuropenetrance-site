@@ -9,12 +9,13 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
 **Primary visitor:** a business development or R&D person at a biotech/pharma company.
 **What they must get in ~10 seconds (Nella's words):** we predict who develops disease from patient-derived blood samples.
 **What they should do:** contact us for a partnership.
+**Second visitor (added by Nella):** researchers at universities and research institutes. **What they should do:** contact us for research collaborations.
 **First partnership offer (Nella's words):** analysing their samples to find ways to predict disease development and who responds to treatment.
 
 ## 2. Goals, non-goals, anti-goals
 **Goals**
 1. Lead with Engine 2: blood gene expression (RNA) profiling and the PenetranSci app. Engine 1 (patient-derived neurons) is shown as "in development / coming next".
-2. One goal on every page: **"Partner with us" / "Discuss a partnership"**, ending in a partnership contact form.
+2. One goal on every page: **"Partner with us" / "Discuss a partnership"**, ending in a partnership contact form. Researchers get their own path: **"Collaborate with us"** on the For researchers page.
 3. The app is **one click from every page** ("Open the app ↗" in the header) and is shown on the Home and Platform pages.
 4. A professional clinical/biotech look (direction A).
 5. A **full German version** of every page, with a language switch that keeps you on the same page.
@@ -49,6 +50,7 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
 | Look | Direction A, "Clinical clarity" |
 | Keep as is | Team page (content) and Evidence numbers |
 | Language | English + full German translation |
+| Research layer | A part of the site for research institutes; researchers should contact us for research collaborations |
 
 ## 5. Design (direction A)
 - **Palette:**
@@ -59,6 +61,7 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
   - amber `#E1A33D` only for "Research Use Only" badges
   - the logo keeps its branching shape: dark node + **teal** branch (the cherry red goes away, matching the app)
 - **Type:** Inter (headings 700–800, body 400/500), IBM Plex Mono uppercase for eyebrows and labels.
+- **Navigation:** Platform · Evidence · For partners · For researchers · Science · Team, plus EN·DE, "Open the app ↗" and "Partner with us". The Home page adds a two-path band: "For biotech & pharma →" and "For researchers →".
 - **Components** (as in the mockup):
   - header with logo, nav, EN·DE switch, "Open the app ↗" (outlined) and "Partner with us" (filled)
   - hero with a live-looking app report card
@@ -76,6 +79,7 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
 | For partners | `partners.html` (new) | The three offers. How a partnership works (intro call → data-sharing agreement → analysis → report and next steps). What to send. Partnership form (Formspree) with fields: name, company, role, email, interest (analyse samples / stratify a trial / model treatment response / other), message. |
 | Science & roadmap | `science.html` (new; replaces `problem.html`, `idea.html`, `impact.html`) | Incomplete penetrance in brief (from today's Problem/Idea pages); why blood immune profiling; Engine 1 (patient-derived neurons) as in development; roadmap (inflammatory subgroup, CRP validation, proteomics). |
 | Team | `team.html` | **Current content unchanged**; restyled; DE translation. |
+| For researchers | `research.html` (new) | Open science: the 8 public GEO datasets with links, methods in plain words, the honest results (linking to Evidence), the open app code on GitHub, how to cite. The app is free for academic research, with the gene reference. Collaboration types: joint studies, sharing a cohort (e.g. with CRP or treatment data to test the inflammatory subgroup), student projects and theses. Research updates (what we're testing next: CRP validation, proteomics). **Research collaboration form** (same Formspree endpoint, with a `type=research` field): name, institution, role, email, interest (joint study / share a cohort / student project / use the app / other), message. |
 | Contact | `contact.html` | Short; points to the partnership form; general contact. |
 | Impressum | `impressum.html` | Legal notice (German law). Content needs Nella's legal details. |
 | Datenschutz | `datenschutz.html` | Privacy policy: hosting (GitHub Pages), Formspree, the app link (Streamlit), no cookies/analytics. |
@@ -102,6 +106,7 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
 4. Self-host the fonts (GDPR); no analytics or cookies, so no cookie banner is needed.
 5. The Impressum and Datenschutz pages are in German, with an English version linked (German law expects the German text).
 6. Logo colours: dark node + teal branch, matching the app.
+7. The analysis code (`NeuroPenetrance-MDD-Clustering`) is not on GitHub yet. The research page links the public app code and says the analysis code is available on request (publishing it later is Nella's call).
 
 ## 10. Answers from Nella
 1. **Impressum:** use a **placeholder** for now: `[Full legal name]`, `[Street and number]`, `[Postcode City]`, `Germany`, and email `partnerships@neuropenetrance.com`. The page carries a visible note for Nella to fill it in before promoting the site. (The domain is registered at IONOS; no company register entry is listed, so the Impressum is drafted for a person, not a company. Adjust if a company is founded.)
