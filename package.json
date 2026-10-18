@@ -1,0 +1,13 @@
+{
+  "name": "neuropenetrance-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node tools/build.mjs && node --test \"tools/*.test.mjs\""
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.1.1",
+    "@fontsource/ibm-plex-mono": "5.1.1"
+  }
+}
