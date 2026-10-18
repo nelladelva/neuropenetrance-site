@@ -72,7 +72,6 @@ test('internal links resolve', () => {
     for (const [, url] of read(p).matchAll(/(?:href|src)="([^"#?]+)[^"]*"/g)) {
       if (/^(https?:|mailto:|tel:|data:)/.test(url)) continue;
       const target = normalize(join(base, url));
-      if (planned.has(target) && !existsSync(join(ROOT, target))) continue; // page planned in a later task
       assert.ok(existsSync(join(ROOT, target)), `${p} → ${url}`);
     }
   }

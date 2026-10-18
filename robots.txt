@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://neuropenetrance.com/sitemap.xml
