@@ -1,6 +1,6 @@
 # neuropenetrance.com redesign: design
 
-*Date: 2026-10-18 · Owner: Nella Delva · Status: draft for approval*
+*Date: 2026-10-18 · Owner: Nella Delva · Status: ready for approval*
 Mockup reference: `.superpowers/brainstorm/directions-v1.html`, **direction A, "Clinical clarity"** (copy saved next to this doc as `mockups/home-direction-A.html`).
 
 ## 1. Intent: why
@@ -103,6 +103,6 @@ The site must win **partnerships with biotech and pharma companies**. Today it r
 5. The Impressum and Datenschutz pages are in German, with an English version linked (German law expects the German text).
 6. Logo colours: dark node + teal branch, matching the app.
 
-## 10. Open questions for Nella
-1. **Impressum details (legally required).** Full legal name, a postal address where you can be reached (a business or c/o address is possible), and contact email. Plus, if a company exists, its legal form and register number; if not, it's listed under your name.
-2. **Contact email shown on the site.** Today every page shows `stemazing.advancement@gmail.com`. An address on your own domain (e.g. `partnerships@neuropenetrance.com`) looks more credible to pharma. Free email forwarding to your Gmail is possible.
+## 10. Answers from Nella
+1. **Impressum:** use a **placeholder** for now: `[Full legal name]`, `[Street and number]`, `[Postcode City]`, `Germany`, and email `partnerships@neuropenetrance.com`. The page carries a visible note for Nella to fill it in before promoting the site. (The domain is registered at IONOS; no company register entry is listed, so the Impressum is drafted for a person, not a company. Adjust if a company is founded.)
+2. **Contact email:** **`partnerships@neuropenetrance.com`** on every page, replacing the Gmail address. Nella sets up the forwarding in IONOS (Email → create forwarding → Gmail); the domain's mail already runs through IONOS.
