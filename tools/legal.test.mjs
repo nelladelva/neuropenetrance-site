@@ -29,18 +29,19 @@ test('no forbidden phrases on any page', () => {
   }
 });
 
-test('impressum has placeholders and a visible note', () => {
-  const h = read('de/impressum.html');
-  const t = textOf(mainOf(h));
-  for (const s of ['Angaben gemäß § 5 DDG', 'Nella Christie Delva', 'Berlin', 'Deutschland', 'partnerships@neuropenetrance.com']) assert.ok(t.includes(s), s);
-  assert.ok(!t.includes('[Full legal name]'), 'name filled in');
-  assert.ok(t.includes('[Straße und Hausnummer]') && t.includes('[PLZ]'), 'street and postcode still marked as missing');
-  assert.match(h, /class="todo-note"/);
-  const en = textOf(mainOf(read('impressum.html')));
-  assert.ok(en.includes('Nella Christie Delva') && en.includes('Berlin') && en.includes('[Street and number]'));
+test('impressum is complete', () => {
+  for (const p of ['de/impressum.html', 'impressum.html']) {
+    const h = read(p);
+    const t = textOf(mainOf(h));
+    for (const s of ['Nella Christie Delva', 'Holzmarktstraße 73', '10179 Berlin', 'partnerships@neuropenetrance.com']) assert.ok(t.includes(s), `${p}: ${s}`);
+    assert.ok(!/\[[^\]]*(name|Straße|Street|PLZ|Postcode)[^\]]*\]/i.test(t), `${p}: no placeholders left`);
+    assert.doesNotMatch(h, /class="todo-note"/, `${p}: no to-do note`);
+  }
+  assert.ok(textOf(mainOf(read('de/impressum.html'))).includes('Angaben gemäß § 5 DDG'));
   for (const p of ['datenschutz.html', 'de/datenschutz.html']) {
     const d = textOf(mainOf(read(p)));
-    assert.ok(d.includes('Nella Christie Delva') && !d.includes('[Full legal name]'), `${p} controller named`);
+    assert.ok(d.includes('Nella Christie Delva') && d.includes('Holzmarktstraße 73, 10179 Berlin'), `${p} controller address`);
+    assert.ok(!/\[(Straße|Street|PLZ|Postcode)/.test(d), `${p}: no address placeholders`);
   }
 });
 

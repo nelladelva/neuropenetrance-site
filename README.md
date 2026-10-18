@@ -15,7 +15,6 @@ Old URLs (`problem`, `idea`, `impact`, `involved`, `neuropenetrance-de`) are gen
 App screenshots: `node tools/screenshots.mjs` (needs Chrome and the `neuropenetrance_app` repo next to this one).
 
 ## To do before promoting the site (Nella)
-- [ ] Add street, house number and postcode to the Impressum (`src/pages/{de,en}/impressum.html`) and the controller in `datenschutz.html` (name and Berlin are filled in), then rebuild.
 - [ ] Have the Datenschutzerklärung (privacy policy) reviewed.
 - [ ] In Formspree (form settings), switch off reCAPTCHA (the honeypot already filters bots); if you keep it, the privacy policy already mentions it.
 - [ ] Set up the email forwarding `partnerships@neuropenetrance.com` → Gmail in IONOS (Email → create forwarding).
