@@ -19,6 +19,9 @@
   var bars = document.querySelectorAll('.bar-fill[data-target]');
   if (!bars.length) return;
 
+  // bars render at full width without JavaScript; with it, they animate in from zero
+  bars.forEach(function (bar) { bar.style.width = '0'; });
+
   function fill() {
     bars.forEach(function (bar) {
       bar.style.width = bar.getAttribute('data-target') + '%';
@@ -56,48 +59,30 @@
 })();
 
 /* ---- Formspree submission (AJAX, no redirect) ----
-   Submitting in the background avoids the cross-domain redirect
-   that silently blocked earlier submissions. ---------------- */
+   Works on every <form class="js-form">. Texts come from the form's data-* attributes so each language
+   shows its own messages. Without JavaScript the form still posts normally to Formspree. ---------------- */
 (function () {
-  var form = document.getElementById('interestForm');
-  if (!form) return;
-
-  var status = document.getElementById('formStatus');
-  var wrap = document.getElementById('formWrap');
-  var success = document.getElementById('formSuccess');
-  var button = form.querySelector('button[type="submit"]');
-
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    if (status) { status.textContent = 'Sending…'; status.classList.remove('error'); }
-    if (button) { button.disabled = true; }
-
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    })
-      .then(function (response) {
-        if (response.ok) {
-          if (wrap) wrap.style.display = 'none';
-          if (success) success.style.display = 'block';
-          return;
-        }
-        return response.json().then(function (data) {
-          var message = 'Something went wrong. Please email stemazing.advancement@gmail.com instead.';
-          if (data && data.errors && data.errors.length) {
-            message = data.errors.map(function (e) { return e.message; }).join(', ');
+  document.querySelectorAll('form.js-form').forEach(function (form) {
+    var status = form.querySelector('.form-status');
+    var success = document.getElementById(form.getAttribute('data-success'));
+    var button = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (status) { status.textContent = form.getAttribute('data-sending'); status.classList.remove('error'); }
+      if (button) { button.disabled = true; }
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (response) {
+          if (response.ok) {
+            form.hidden = true;
+            if (success) { success.hidden = false; success.focus(); }
+            return;
           }
-          throw new Error(message);
+          throw new Error(form.getAttribute('data-error'));
+        })
+        .catch(function () {
+          if (status) { status.textContent = form.getAttribute('data-error'); status.classList.add('error'); }
+          if (button) { button.disabled = false; }
         });
-      })
-      .catch(function (error) {
-        if (status) {
-          status.textContent = error.message || 'Network error — please email stemazing.advancement@gmail.com instead.';
-          status.classList.add('error');
-        }
-        if (button) { button.disabled = false; }
-      });
+    });
   });
 })();

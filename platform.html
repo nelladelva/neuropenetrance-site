@@ -1,142 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Platform — NeuroPenetrance</title>
-<meta name="description" content="Two engines that feed each other: a laboratory service that profiles patient-derived neurons, and an AI platform that learns from every sample it produces.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="What we analyse (whole-blood RNA), how the PenetranSci engine works, what partners get, and the Research Use Only app.">
+<link rel="canonical" href="https://neuropenetrance.com/platform.html">
+<link rel="alternate" hreflang="en" href="https://neuropenetrance.com/platform.html">
+<link rel="alternate" hreflang="de" href="https://neuropenetrance.com/de/platform.html">
+<link rel="alternate" hreflang="x-default" href="https://neuropenetrance.com/platform.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Platform — NeuroPenetrance">
+<meta property="og:description" content="What we analyse (whole-blood RNA), how the PenetranSci engine works, what partners get, and the Research Use Only app.">
+<meta property="og:url" content="https://neuropenetrance.com/platform.html">
+<meta property="og:image" content="https://neuropenetrance.com/assets/img/og-image.png">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#0D2438">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
-  <div class="wrap nav-row">
-    <a href="index.html" class="brand" aria-label="NeuroPenetrance — home">
-      <svg class="brand-icon" viewBox="0 0 44 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M7 17 H17" stroke="#1B1D1E" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M16 17 C21 17, 23 10, 29 8" stroke="#A6192E" stroke-width="3.4" stroke-linecap="round"/>
-        <path d="M16 17 C21 17, 23 24, 29 26" stroke="#A9ADA7" stroke-width="3.4" stroke-linecap="round"/>
-        <circle cx="6" cy="17" r="5" fill="#1B1D1E"/>
-        <circle cx="32.5" cy="7" r="5" fill="#A6192E"/>
-        <circle cx="33" cy="26.5" r="3.6" stroke="#A9ADA7" stroke-width="2.8"/>
-      </svg>
-      <span class="brand-name">Neuro<span class="pen">Penetrance</span></span>
-    </a>
-    <nav class="primary-nav" id="primaryNav">
-      <a href="problem.html">The Problem</a>
-      <a href="idea.html">The Idea</a>
-      <a href="platform.html" class="active">Platform</a>
-      <a href="evidence.html">Evidence</a>
-      <a href="impact.html">Impact</a>
-      <a href="team.html">Team</a>
-      <a href="contact.html" class="nav-cta">Get in touch</a>
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="NeuroPenetrance home"><svg class="brand-icon" viewBox="0 0 44 34" fill="none" aria-hidden="true">
+  <path d="M7 17 H17" stroke="#0D2438" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 10, 29 8" stroke="#0B6E79" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 24, 29 26" stroke="#8FA6BA" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="6" cy="17" r="5" fill="#0D2438"/><circle cx="32.5" cy="7" r="5" fill="#0B6E79"/>
+  <circle cx="33" cy="26.5" r="3.6" stroke="#8FA6BA" stroke-width="2.8"/></svg><span class="brand-name">Neuro<span>Penetrance</span></span></a>
+    <nav class="primary-nav" id="primaryNav" aria-label="Main">
+        <a href="platform.html" aria-current="page">Platform</a>
+        <a href="evidence.html">Evidence</a>
+        <a href="partners.html">For partners</a>
+        <a href="research.html">For researchers</a>
+        <a href="science.html">Science</a>
+        <a href="team.html">Team</a>
+      <div class="lang-switch" aria-label="Language">
+        <a href="platform.html" hreflang="en" aria-current="true">EN</a>
+        <span aria-hidden="true">·</span>
+        <a href="de/platform.html" hreflang="de">DE</a>
+      </div>
+      <a class="btn btn-outline btn-sm" href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Open the app ↗</a>
+      <a class="btn btn-primary btn-sm" href="partners.html">Partner with us</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle menu">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu">☰</button>
   </div>
 </header>
-
 <main id="main">
+<section class="page-head">
+  <div class="container">
+    <span class="eyebrow">Platform · Engine 2</span>
+    <h1>A blood gene-expression engine, and an app to use it</h1>
+    <p class="lede">PenetranSci turns a small panel of immune genes, measured in whole blood, into an interpretable profile for every patient: a score, a calibrated probability and the genes behind it.</p>
+  </div>
+</section>
 
-  <div class="page-header">
-    <div class="wrap">
-      <a href="index.html" class="breadcrumb">← Back to home</a>
-      <span class="eyebrow">The platform</span>
-      <h1>Two engines that make each other stronger</h1>
-      <p class="lede">One is a laboratory service that measures what a mutation does inside real human neurons. The other is software that learns from every sample the lab produces. Each one makes the other more valuable.</p>
+<section class="section">
+  <div class="container">
+    <div class="cards">
+      <div class="card">
+        <span class="eyebrow">What we analyse</span>
+        <h3>Whole-blood RNA</h3>
+        <p>Gene expression from whole blood, collected in PAXgene or Tempus RNA tubes and measured by RNA sequencing, microarray or a targeted qPCR panel. Not DNA, and not proteins.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">How it works</span>
+        <h3>A 6-gene immune signature</h3>
+        <p>Three inflammation genes (HP, MMP8, CEACAM8) and three lymphocyte genes (KLRB1, KLRG1, SH2D1A), each compared with healthy controls. One group minus the other, with no hidden model, calibrated on 779 people.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">What you get</span>
+        <h3>Results you can act on</h3>
+        <p>A score and calibrated probability per patient, the gene contributions, the inflammatory subgroup, batch results for whole cohorts, and a written report.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <section>
-    <div class="wrap">
-      <div class="plain-box" style="max-width:var(--read); margin-top:0;">
-        <span class="plain-label">The business in one sentence</span>
-        <p>We sell a lab service today, and the data that service generates becomes an AI product that nobody else can build — because nobody else has the data.</p>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="engine-grid">
-        <div class="engine">
-          <span class="engine-tag">ENGINE 1 · REVENUE FROM DAY ONE</span>
-          <h3>The laboratory service</h3>
-          <p class="desc">We take patient stem cell lines and grow them into the specific types of brain cell that matter for these conditions — inhibitory neurons, cortical neurons, and small 3D "mini-brain" organoids. Then we measure them deeply: which genes are switched on, which proteins are present, how the DNA is packaged, and how the neurons actually fire.</p>
-          <p class="desc">To see how a mutation behaves under pressure, we also dial the underlying biology up and down — using gene-edited cell lines and drug-based tuning of the SHH pathway, the developmental system that Dr. Hammes-Lewin's laboratory has studied for years. Patient stem cell lines carrying human SHH mutations are available from day one through our collaborator Dr. Valérie Dupé at the University of Rennes.</p>
-          <ul>
-            <li><b>Penetrance Risk Profile</b>A quantitative molecular signature separating genetic vulnerability from resilience.</li>
-            <li><b>Therapeutic Sensitivity Report</b>How those cells respond to drug-based modulation — the patient's window for intervention.</li>
-            <li><b>Biomarker Panel</b>A ranked set of molecular targets for clinical follow-up or trial enrolment.</li>
-          </ul>
-        </div>
-
-        <div class="engine">
-          <span class="engine-tag">ENGINE 2 · THE COMPOUNDING ASSET</span>
-          <h3>The AI biomarker platform</h3>
-          <p class="desc">Every sample Engine 1 runs produces thousands of molecular measurements. Engine 2 is the machine learning layer trained on that growing library — classifiers that learn which biological patterns predict illness and which predict resilience, and rank the strongest candidate biomarkers by pathway, cell type and developmental stage.</p>
-          <p class="desc">Crucially, this training data is not a public dataset anyone can download. It is tied to known mutations and controlled experiments, which means the models can pursue cause rather than mere correlation. Delivered as software to pharma R&amp;D and diagnostic lab partners, it scales without a matching increase in lab cost.</p>
-          <ul>
-            <li><b>Already built and tested</b>The pipeline exists and has been tested end-to-end on public patient data — see the <a href="evidence.html" class="inline">Evidence page</a>.</li>
-            <li><b>Founder-built from day one</b>The founder's own data science background (Python, SQL, BigQuery, scikit-learn) has carried this engine to a tested proof of concept — with a technical co-founder now being sought to help scale it.</li>
-            <li><b>Interpretable by design</b>Outputs are ranked and explainable, which is what clinical and regulatory use demands.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="article" style="margin-top:52px;">
-        <h2>The flywheel</h2>
-        <p>Each service contract generates proprietary training data that sharpens the AI. A sharper AI makes each new service contract more valuable. A generic stem cell contract lab has the wet-lab capability but not the AI layer built for this specific question; an academic core facility has neither the commercial throughput nor the incentive. That compounding loop is the defensible part of the business.</p>
-
-        <h2>Where we sit in the market</h2>
-        <p>No company we have identified combines patient-derived neuronal profiling with a penetrance or disease-risk product built specifically for neurodevelopmental conditions. The surrounding neighbourhood — precision psychiatry biomarkers, stem-cell-based drug-response prediction, polygenic risk scoring — does contain funded, credentialed companies, and several could plausibly extend toward this niche.</p>
-
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr><th>Company</th><th>Where</th><th>Technology</th><th>Question it answers</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>NeuroKaire (formerly Genetika+)</td><td>Israel; active in US &amp; EU</td><td>Patient-derived neurons + AI</td><td>Which antidepressant suits an already-diagnosed patient</td></tr>
-              <tr><td>Circular Genomics</td><td>United States</td><td>Circulating RNA blood markers</td><td>Antidepressant response prediction</td></tr>
-              <tr><td>Alto Neuroscience</td><td>United States</td><td>EEG, cognitive tasks, wearables</td><td>Matching patients to drugs across several disorders</td></tr>
-              <tr><td>Orchid Health / Genomic Prediction</td><td>United States</td><td>DNA-only polygenic scoring</td><td>Reproductive and embryo risk scoring</td></tr>
-              <tr><td>Axol Bioscience / NeuroProof / NEUROFIT</td><td>UK / Germany / France</td><td>General stem cell &amp; CNS lab services</td><td>Broad disease modelling — no penetrance focus</td></tr>
-              <tr><td><strong>NeuroPenetrance</strong></td><td>Berlin, Germany</td><td>Patient neurons + multi-omics + AI</td><td><strong>Whether a variant carrier will develop the disorder at all</strong></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>NeuroKaire is the closest technical analogue — a similar combination of patient-derived neurons and machine learning — but it answers a different clinical question. It helps choose a drug for someone already diagnosed with depression. We are asking whether a person carrying a risk variant will develop a disorder in the first place. Different question, different data, different customer moment.</p>
-
-        <h2>How we make money</h2>
-        <p>Engine 1 is fee-for-service: a Penetrance Risk Profile at €8,000–15,000 per sample set, a full Therapeutic Sensitivity Report at €20,000–35,000, and custom multi-patient cohort contracts for pharma clients. Engine 2 adds a software licence from year two, at €2,000–8,000 per month for pharma biomarker teams — revenue that grows without a matching increase in laboratory cost.</p>
-
+<section class="section alt">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">The app</span>
+        <h2>PenetranSci, ready to try</h2>
+        <p class="lede">Score a single sample or a whole study, read the gene reference, and download a PDF report. Patient data is processed only for the current session and is never stored on the server.</p>
+        <ul class="check-list">
+          <li>Patient intake with automatic quality flags (infection, steroids, high CRP, RNA quality)</li>
+          <li>Calibrated probability with a 95% interval and likelihood ratio</li>
+          <li>Batch analysis for whole cohorts, with study-level AUC</li>
+          <li>Gene reference: biology, clinical use and drug-development relevance</li>
+          <li>English and German</li>
+        </ul>
         <div class="btn-row">
-          <a href="evidence.html" class="btn btn-primary">See the tested results →</a>
-          <a href="contact.html" class="btn btn-ghost">Talk to us about a pilot →</a>
+          <a class="btn btn-primary" href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Open the app ↗</a>
+          <a class="btn btn-outline" href="partners.html#form">Talk to us about your data</a>
         </div>
       </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-row">
-    <p>NeuroPenetrance is being developed in Berlin, building on research at the Max Delbrück Center for Molecular Medicine. © 2026 Nella Christie Delva.</p>
-    <div class="footer-links">
-      <a href="https://neuropenetrance.streamlit.app" target="_blank" rel="noopener">Live demo</a>
-      <a href="https://github.com/nelladelva/neuropenetrance_app" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:stemazing.advancement@gmail.com">Email</a>
+      <div>
+        <figure class="shot"><img src="assets/img/app-intake.png" alt="PenetranSci app: patient intake screen with quality checks and Research Use Only label" width="1280" height="840" loading="lazy"><figcaption>Patient intake with quality checks</figcaption></figure>
+      </div>
     </div>
   </div>
-</footer>
+</section>
 
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <figure class="shot"><img src="assets/img/app-report.png" alt="Example PenetranSci PDF report: 61% estimated probability, gene table, quality flags and limitations" width="848" height="1200" loading="lazy"><figcaption>Example report (illustrative profile, not patient data)</figcaption></figure>
+      <div>
+        <span class="eyebrow">Trust and safety</span>
+        <h2>Data protection and Research Use Only</h2>
+        <ul class="check-list">
+          <li>Research Use Only: not a medical device and not for use in diagnostic procedures</li>
+          <li>Partner data is handled under a data-sharing agreement, in line with GDPR</li>
+          <li>The app never stores patient data on its server</li>
+          <li>Open methods: performance on every study is published, including what didn't work</li>
+        </ul>
+        <div class="callout"><span class="callout-label">Honest performance</span>On 7 studies it had never seen, the signature separates people with depression from healthy controls with an average AUC of 0.61, about the same as a standard blood count. It is a stratification and research tool, not a diagnostic test. <a href="evidence.html">See the evidence →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="banner"><span class="tag">Engine 1 · in development</span><span>Patient-derived neurons grown from stem cells, to measure how a risk gene behaves in a person's own brain cells. <a href="science.html">Roadmap →</a></span></div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <a href="index.html" class="brand brand-footer" aria-label="NeuroPenetrance home"><svg class="brand-icon" viewBox="0 0 44 34" fill="none" aria-hidden="true">
+  <path d="M7 17 H17" stroke="#0D2438" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 10, 29 8" stroke="#0B6E79" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M16 17 C21 17, 23 24, 29 26" stroke="#8FA6BA" stroke-width="3.4" stroke-linecap="round"/>
+  <circle cx="6" cy="17" r="5" fill="#0D2438"/><circle cx="32.5" cy="7" r="5" fill="#0B6E79"/>
+  <circle cx="33" cy="26.5" r="3.6" stroke="#8FA6BA" stroke-width="2.8"/></svg><span class="brand-name">Neuro<span>Penetrance</span></span></a>
+      <p>Blood-based immune profiling for precision psychiatry. Research Use Only.</p>
+      <p><a href="mailto:partnerships@neuropenetrance.com">partnerships@neuropenetrance.com</a></p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="platform.html">Platform</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="partners.html">For partners</a>
+      <a href="research.html">For researchers</a>
+      <a href="science.html">Science</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="impressum.html">Legal notice (Impressum)</a>
+      <a href="datenschutz.html">Privacy policy</a>
+      <a href="de/platform.html" hreflang="de">Deutsch</a>
+    </nav>
+  </div>
+  <div class="container footer-base">© 2026 NeuroPenetrance · Research Use Only</div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
