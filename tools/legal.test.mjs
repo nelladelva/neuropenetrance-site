@@ -29,6 +29,14 @@ test('no forbidden phrases on any page', () => {
   }
 });
 
+test('science cost statistic is the sourced OECD figure', () => {
+  for (const [p, num] of [['science.html', '4%+'], ['de/science.html', '4 %+']]) {
+    const t = textOf(read(p));
+    assert.ok(!/1[.,]7\s?%/.test(t), `${p}: unsourced 1.7% figure`);
+    assert.ok(t.includes(num) && t.includes('OECD'), `${p}: OECD cost figure`);
+  }
+});
+
 test('impressum is complete', () => {
   for (const p of ['de/impressum.html', 'impressum.html']) {
     const h = read(p);
