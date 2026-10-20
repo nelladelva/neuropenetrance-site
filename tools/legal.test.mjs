@@ -37,6 +37,14 @@ test('science cost statistic is the sourced OECD figure', () => {
   }
 });
 
+test('science treatment-delay statistic is the sourced WHO survey figure', () => {
+  for (const p of ['science.html', 'de/science.html']) {
+    const t = textOf(read(p));
+    assert.ok(!/10\+\s?(yrs|Jahre)/.test(t), `${p}: unsourced 10+ years figure`);
+    assert.ok(t.includes('1–14') && t.includes('WHO'), `${p}: WHO delay figure`);
+  }
+});
+
 test('impressum is complete', () => {
   for (const p of ['de/impressum.html', 'impressum.html']) {
     const h = read(p);
